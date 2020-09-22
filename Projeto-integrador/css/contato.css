@@ -1,0 +1,59 @@
+.conteiner-geral{
+  font-family: 'Roboto', sans-serif;
+}
+
+.conteiner-m-f{
+  margin: 2%;
+  display: flex;
+}
+
+.img-contato{
+  min-height: 490px;
+  background-image: url(../img/contato/faleconosco.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.txt-contato{
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 180%;
+  padding: 10%;
+}
+
+.conteiner-formulario {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  padding: 3%;
+}
+
+input, textarea{
+  padding: 4%;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: rgba(0,0,0,0);
+  opacity: 1;
+  border-radius: 5px;
+  resize: none;
+}
+
+div .botao {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  padding: 5% 50%;
+  font-weight: bold;
+}
+
+div .botao:hover{
+  background-color: lightblue;
+  transition: 1.5s;
+  border-radius: 15px;
+  cursor: pointer;
+}

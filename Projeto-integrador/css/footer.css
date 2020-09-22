@@ -1,0 +1,26 @@
+.rodape{
+  background-color: #157;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.cont-footer{
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+}
+
+footer h1{
+  font-size: 200%;
+}
+
+.img-footer{
+  max-width: 10%;
+}
+
+.desc-tel{
+  display: flex;
+  justify-content: center;
+  margin: 0 20%;
+}

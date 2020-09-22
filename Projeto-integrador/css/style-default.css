@@ -1,0 +1,36 @@
+/*body {
+  background-image: url("../img/Background.jpg");
+  width: 100%;
+  background-size:cover;
+}
+*/
+.subnav {
+  position: relative;
+  display: flex;
+  font-size: 120%;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #157;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subnav li {
+  margin: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+a:hover{
+  position: fixed;
+  border-bottom: 2px solid #fff;
+  font-size: 130%;
+  transition: 0.5s ease-out;
+}
+
+.subnav li a {
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}

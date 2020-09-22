@@ -1,0 +1,48 @@
+.conteiner-geral{
+  font-family: 'Roboto', sans-serif;
+}
+
+.img-servicos{
+  min-height: 490px;
+  background-image: url(../img/servicos/servicos-slogan.jpg);
+  background-size: auto auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.txt-servicos{
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 180%;
+  padding: 10%;
+}
+
+.desc-serv{
+  text-align: center;
+  font-size: 300%;
+  margin: 2% 20%;
+}
+
+.service{
+  display: flex;
+  justify-content: center;
+  margin: 2% 20%;
+  margin-left: 25%;
+  font-size: 100%;
+}
+
+.txt-serv{
+  font-size: 90%;
+}
+
+.img-serv{
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+.serv{
+  text-align: center;
+  margin: 0 5%
+}
