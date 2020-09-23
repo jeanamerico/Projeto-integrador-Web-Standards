@@ -14,7 +14,12 @@ $msg = filter_input(INPUT_POST, 'textarea');
 $tel = filter_input(INPUT_POST, 'telefone');
 
 $inserirbd = "INSERT INTO formulario VALUES ('$nome', '$sobrenome', '$email', '$tel', '$msg')";
-
 $resutadofinal = mysqli_query($conn, $inserirbd);
+ 
+if(mysqli_insert_id($conn)){
+    header("Location: ../html/contato.html");
+}else{
+    header("Location: ../html/contato.html");
+}
 
 ?>
