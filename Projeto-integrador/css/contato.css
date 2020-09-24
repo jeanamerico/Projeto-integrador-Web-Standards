@@ -7,6 +7,19 @@
   display: flex;
 }
 
+.verific {
+  display: flex;
+  margin: 0 5%;
+}
+
+li {
+  margin: 0 2% 0 15%;
+}
+
+.desc-opcao {
+  text-align: center;
+}
+
 .img-contato{
   min-height: 490px;
   background-image: url(../img/contato/faleconosco.jpg);
@@ -50,6 +63,7 @@ div .botao {
   padding: 5% 50%;
   font-weight: bold;
 }
+
 
 div .botao:hover{
   background-color: lightblue;

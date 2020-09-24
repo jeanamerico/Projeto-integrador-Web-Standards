@@ -12,10 +12,11 @@ $sobrenome = filter_input(INPUT_POST, 'snome');
 $email = filter_input(INPUT_POST, 'email');
 $msg = filter_input(INPUT_POST, 'textarea');
 $tel = filter_input(INPUT_POST, 'telefone');
+$verif = filter_input(INPUT_POST, 'verifica');
 
-$inserirbd = "INSERT INTO formulario VALUES ('$nome', '$sobrenome', '$email', '$tel', '$msg')";
-$resutadofinal = mysqli_query($conn, $inserirbd);
- 
+$inserirbd = "INSERT INTO formulario VALUES ('', '$nome', '$sobrenome', '$email', '$tel', '$msg', '$verif')";
+    $resutadofinal = mysqli_query($conn, $inserirbd);
+
 if(mysqli_insert_id($conn)){
     header("Location: ../html/contato.html");
 }else{

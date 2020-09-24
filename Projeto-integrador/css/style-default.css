@@ -1,13 +1,7 @@
-/*body {
-  background-image: url("../img/Background.jpg");
-  width: 100%;
-  background-size:cover;
-}
-*/
 .subnav {
   position: relative;
   display: flex;
-  font-size: 120%;
+  font-size: 110%;
   justify-content: center;
   text-transform: uppercase;
   font-weight: bold;
