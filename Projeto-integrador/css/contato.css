@@ -7,18 +7,17 @@
   display: flex;
 }
 
-.verific {
-  display: flex;
-  margin: 0 5%;
-}
-
 li {
   margin: 0 2% 0 15%;
 }
 
-.desc-opcao {
-  text-align: center;
-  margin: 5%;
+select.desc-opcao {
+  width: 100%;
+  margin:5%;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 5px;
+  font-size: 120%;
 }
 
 .img-contato{

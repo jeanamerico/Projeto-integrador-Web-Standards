@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/style-default.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/contato.css">
+    <script src="../js/validar.js"></script>
   </head>
   <body>
     <div class="row">
@@ -35,40 +36,33 @@
           </div>
 
           <div class="conteiner-formulario">
-            <form class="formulario" action="../php/conect.php" method="POST">
+            <form name="formulario" class="formulario" action="../php/conect.php" method="POST">
               <fieldset class="grupo">
                 <div class="campo">
-                  <input type="text" name="nome" placeholder="Nome">
+                  <input type="text" name="nome" placeholder="Nome" >
                 </div>
                 <div class="campo">
-                  <input type="text" name="snome" placeholder="Sobrenome">
+                  <input type="text" name="snome" placeholder="Sobrenome" >
                 </div>
                 <div class="campo">
-                  <input type="email" name="email" placeholder="Exemplo@dominio.com.br">
+                  <input type="email" name="email" placeholder="Exemplo@dominio.com.br" >
                 </div>
                 <div class="campo">
-                  <input type="tel" name="telefone" placeholder="XX XXXXX-XXXX">
+                  <input type="tel" name="telefone" placeholder="XX XXXXX-XXXX" >
                 </div>
                 <div class="campo">
                   <textarea name="textarea"
                   rows="6" cols="30"
-                  placeholder="Seu comentario aqui."></textarea>
+                  placeholder="Seu comentario aqui." ></textarea>
                 </div>
                 <div class="campo">
-                  <p class="desc-opcao">Informe o serviço desejado!</p>
-                  <ul class="verific">
-                    <li>
-                      <input type="radio" name="verifica" value="Consultoria">
-                      <p>Consultoria</p>
-                    </li>
-                    <li>
-                      <input type="radio" name="verifica" value="Transporte e Movimentação">
-                      <p>Transporte e Movimentação</p>
-                    </li>
-                  </ul>
+                  <select class="desc-opcao" name="verifica" >
+                    <option value="Consultoria">Consultoria</option>
+                    <option value="Transporte e Movimentação">Transporte e Movimentação</option>
+                  </select>
                 </div>
                 <div class="campo">
-                  <button class="botao" type="submit">Enviar</button>
+                  <button class="botao" type="submit" onclick="return validar()">Enviar</button>
                 </div>
               </fieldset>
             </form>
