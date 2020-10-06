@@ -27,6 +27,7 @@ select.desc-opcao {
 .term a{
   text-decoration: none;
   display: inline-block;
+  transition: none;
 }
 
 .img-contato{
