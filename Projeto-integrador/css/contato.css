@@ -20,6 +20,15 @@ select.desc-opcao {
   font-size: 120%;
 }
 
+.term input {
+  width: auto;
+}
+
+.term a{
+  text-decoration: none;
+  display: inline-block;
+}
+
 .img-contato{
   min-height: 490px;
   background-image: url(../img/contato/faleconosco.jpg);

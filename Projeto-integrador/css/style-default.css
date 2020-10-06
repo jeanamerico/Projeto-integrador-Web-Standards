@@ -16,13 +16,14 @@
   justify-content: center;
 }
 
+/* declaração universal, atrapalha no termo de uso na pagina de contato, altera aqui ou la deixa none
 a:hover{
   position: fixed;
   border-bottom: 2px solid #fff;
   font-size: 130%;
   transition: 0.5s ease-out;
 }
-
+*/
 .subnav li a {
   color: #fff;
   text-decoration: none;
