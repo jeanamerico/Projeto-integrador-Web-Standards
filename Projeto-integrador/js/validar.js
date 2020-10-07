@@ -5,7 +5,8 @@ function validar() {
     var telefone = formulario.telefone.value;
     var textarea = formulario.textarea.value;
    
-    if (nome.length < 3) {
+    /* mudar os 3 if's com mesma comparação e alterar o alert*/
+    if (nome.length < 3 ) {
         alert('Informe seu nome correto!');
         formulario.nome.focus();
         return false;
