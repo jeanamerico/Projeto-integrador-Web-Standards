@@ -10,11 +10,12 @@ $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 $nome = filter_input(INPUT_POST, 'nome');
 $sobrenome = filter_input(INPUT_POST, 'snome');
 $email = filter_input(INPUT_POST, 'email');
-$msg = filter_input(INPUT_POST, 'textarea');
 $tel = filter_input(INPUT_POST, 'telefone');
+$msg = filter_input(INPUT_POST, 'textarea');
 $verif = filter_input(INPUT_POST, 'verifica');
+$termuso = filter_input(INPUT_POST, 'termuso');
 
-$inserirbd = "INSERT INTO formulario VALUES ('', '$nome', '$sobrenome', '$email', '$tel', '$msg', '$verif')";
+$inserirbd = "INSERT INTO formulario VALUES ('', '$nome', '$sobrenome', '$email', '$tel', '$msg', '$verif', '$termuso' )";
     $resutadofinal = mysqli_query($conn, $inserirbd);
 
 if(mysqli_insert_id($conn)){
