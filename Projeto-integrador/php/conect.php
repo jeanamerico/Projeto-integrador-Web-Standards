@@ -1,5 +1,4 @@
 <?php
-
 $servidor= "localhost";
 $usuario= "root";
 $senha = "";
@@ -15,13 +14,14 @@ $msg = filter_input(INPUT_POST, 'textarea');
 $verif = filter_input(INPUT_POST, 'verifica');
 $termuso = filter_input(INPUT_POST, 'termouso');
 
-$inserirbd = "INSERT INTO formulario VALUES ('', '$nome', '$sobrenome', '$email', '$tel', '$msg', '$verif', '$termuso')";
-$resutadofinal = mysqli_query($conn, $inserirbd);
-
-if(mysqli_insert_id($conn)){
+if($termuso == 'Concordo') {
+    $inserirbd = "INSERT INTO formulario VALUES ('', '$nome', '$sobrenome', '$email', '$tel', '$msg', '$verif', '$termuso')";
+    $resutadofinal = mysqli_query($conn, $inserirbd);
+    if(mysqli_insert_id($conn)){
     header("Location: ../html/contato.html");
-}else{
-    header("Location: ../html/contato.html");
+    }
 }
+header("Location: ../html/contato.html");
+
 
 ?>

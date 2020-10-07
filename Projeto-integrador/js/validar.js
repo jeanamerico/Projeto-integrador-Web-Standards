@@ -4,6 +4,7 @@ function validar() {
     var email = formulario.email.value;
     var telefone = formulario.telefone.value;
     var textarea = formulario.textarea.value;
+    var termouso = document.getElementsByName('termouso');
 
     if (nome.length < 3) {
         alert('Informe seu nome correto!');
@@ -34,4 +35,10 @@ function validar() {
         formulario.textarea.focus();
         return false;
     }
+
+    if(document.getElementsByTagName('termouso').checked){
+        alert('Verificar o termo de uso');
+        formulario.termouso.focus();
+        return false;
+    }   
 }
