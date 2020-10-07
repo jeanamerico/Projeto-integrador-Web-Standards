@@ -14,7 +14,7 @@ $msg = filter_input(INPUT_POST, 'textarea');
 $verif = filter_input(INPUT_POST, 'verifica');
 $termuso = filter_input(INPUT_POST, 'termouso');
 
-if($termuso == 'Concordo') {
+if($termuso == 'Concordo' && $verif == 'Consultoria' || $verif == 'Transporte') {
     $inserirbd = "INSERT INTO formulario VALUES ('', '$nome', '$sobrenome', '$email', '$tel', '$msg', '$verif', '$termuso')";
     $resutadofinal = mysqli_query($conn, $inserirbd);
     if(mysqli_insert_id($conn)){
@@ -22,6 +22,4 @@ if($termuso == 'Concordo') {
     }
 }
 header("Location: ../html/contato.html");
-
-
 ?>
