@@ -1,17 +1,25 @@
 function validar() {
+    /*
     var nome = formulario.nome.value;
+    */
     var snome = formulario.snome.value;
     var email = formulario.email.value;
     var telefone = formulario.telefone.value;
     var textarea = formulario.textarea.value;
+    let os = document.getElementsByName('nome');
    
-    /* mudar os 3 if's com mesma comparação e alterar o alert*/
+
+    if(os.length < 3){
+        alert("Informe o seu" + os + "correto!");
+        return false;
+    }
+/*
     if (nome.length < 3 ) {
         alert('Informe seu nome correto!');
         formulario.nome.focus();
         return false;
     }
-
+*/
     if (snome.length < 3) {
         alert('Informe seu sobrenome correto!');
         formulario.snome.focus();
