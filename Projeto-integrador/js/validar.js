@@ -5,17 +5,10 @@ function validar() {
     var email = formulario.email.value;
     var telefone = formulario.telefone.value;
     var textarea = formulario.textarea.value;
-    /*
-    let os = document.getElementsByName('nome');
-   
-
-    if(os.length < 3){
-        alert('Informe o seu' + os + 'correto!');
-        return false;
-    }
-*/
-    if (nome.length < 3 ) {
-        alert('Informe seu nome correto!');
+    let d = new Date();
+    
+    if (nome.length < 3) {
+        alert('Informe seu nome');
         formulario.nome.focus();
         return false;
     }
@@ -26,7 +19,7 @@ function validar() {
         return false;
     }
 
-    if (email.indexOf('@') < 0) { /*melhorar*/
+    if (email.indexOf('@') < 0 || email.indexOf('.') == - 1) {
         alert('Informe seu email correto!');
         formulario.email.focus();
         return false;
