@@ -1,3 +1,12 @@
+function somenteNumeros(num) {
+    var er = /[^0-9.]/;
+    er.lastIndex = 0;
+    var campo = num;
+    if (er.test(campo.value)) {
+      campo.value = "";
+    }
+}
+
 function validar() {
 
     var nome = formulario.nome.value;
@@ -6,7 +15,7 @@ function validar() {
     var telefone = formulario.telefone.value;
     var textarea = formulario.textarea.value;
     let d = new Date();
-    
+
     if (nome.length < 3) {
         alert('Informe seu nome');
         formulario.nome.focus();
@@ -19,13 +28,13 @@ function validar() {
         return false;
     }
 
-    if (email.indexOf('@') < 0 || email.indexOf('.') == - 1) {
+    if (email.indexOf('@') < 0 || email.indexOf('.com') == - 1) {
         alert('Informe seu email correto!');
         formulario.email.focus();
         return false;
     }
 
-    if (telefone.length < 7) { /*isnan*/
+    if (telefone.length < 7) {
         alert('Informe um telefone valido');
         formulario.telefone.focus();
         return false;
@@ -37,9 +46,9 @@ function validar() {
         return false;
     }
 
-    if(document.getElementsByTagName('termouso').checked){
+    if (document.getElementsByTagName('termouso').checked) {
         alert('Verificar o termo de uso');
         formulario.termouso.focus();
         return false;
-    }   
+    }
 }
