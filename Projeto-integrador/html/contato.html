@@ -44,10 +44,10 @@
           <form name="formulario" class="formulario" action="../php/conect.php" method="POST">
             <fieldset class="grupo">
               <div class="campo">
-                <input type="text"  name="nome" placeholder="Nome" required>
+                <input id="Nome" type="text"  name="nome" placeholder="Nome" onkeyup="validaCampos(this);" required>
               </div>
               <div class="campo">
-                <input type="text" name="snome" placeholder="Sobrenome" required>
+                <input id="Nome" type="text" name="snome" placeholder="Sobrenome" onkeyup="validaCampos(this);" required>
               </div>
               <div class="campo">
                 <input type="email" name="email" placeholder="Exemplo@dominio.com.br" required>
