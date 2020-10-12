@@ -19,6 +19,13 @@
       <li><a class="tabnav" href="../index.html">Home</a></li>
       <li><a class="tabnav" href="servicos.html">Serviços</a></li>
       <li><a class="tabnav" href="contato.html">Contato</a></li>
+      <div class="logonadm">
+        <form class="logon-adm" action="">
+          <input type="text" name="Login" id="Login" placeholder="Login">
+          <input type="password" name="Passwd" id="Passwd" placeholder="Senha">
+          <button class="botao-adm" type="submit">Login</button>
+        </form>
+      </div>
     </ul>
   </div>
 
@@ -44,10 +51,10 @@
           <form name="formulario" class="formulario" action="../php/conect.php" method="POST">
             <fieldset class="grupo">
               <div class="campo">
-                <input id="Nome" type="text"  name="nome" placeholder="Nome" onkeyup="validaCampos(this);" required>
+                <input id="Nome" type="text"  name="nome" placeholder="Nome" required>
               </div>
               <div class="campo">
-                <input id="Nome" type="text" name="snome" placeholder="Sobrenome" onkeyup="validaCampos(this);" required>
+                <input id="Nome" type="text" name="snome" placeholder="Sobrenome" required>
               </div>
               <div class="campo">
                 <input type="email" name="email" placeholder="Exemplo@dominio.com.br" required>

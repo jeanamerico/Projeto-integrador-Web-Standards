@@ -1,3 +1,7 @@
+/*
+fazer sistema de coleta de dados e localização
+*/
+
 function somenteNumeros(num) {
     var er = /[^0-9.]/;
     er.lastIndex = 0;
@@ -29,7 +33,7 @@ function validar() {
         return false;
     }
 
-    if (email.indexOf('@') < 0 || email.indexOf('.com') == - 1) {
+    if (email.indexOf('@') < 0 || email.indexOf('.com') == -1 ) {
         alert('Informe seu email correto!');
         formulario.email.focus();
         return false;
