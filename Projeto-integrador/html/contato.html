@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style-default.css">
   <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/logon.css">
   <link rel="stylesheet" href="../css/contato.css">
   <script src="../js/validar.js"></script>
 </head>
@@ -20,13 +19,6 @@
       <li><a class="tabnav" href="../index.html">Home</a></li>
       <li><a class="tabnav" href="servicos.html">Serviços</a></li>
       <li><a class="tabnav" href="contato.html">Contato</a></li>
-      <div class="logonadm">
-        <form class="logon-adm" action="">
-          <input type="text" name="Login" id="Login" placeholder="Login">
-          <input type="password" name="Passwd" id="Passwd" placeholder="Senha">
-          <button class="botaoadm" type="submit">Login</button>
-        </form>
-      </div>
     </ul>
   </div>
 
@@ -52,19 +44,19 @@
           <form name="formulario" class="formulario" action="../php/conect.php" method="POST">
             <fieldset class="grupo">
               <div class="campo">
-                <input id="Nome" type="text"  name="nome" placeholder="Nome" required>
+                <input id="form1" type="text"  name="nome" placeholder="Nome" required>
               </div>
               <div class="campo">
-                <input id="Nome" type="text" name="snome" placeholder="Sobrenome" required>
+                <input id="form1" type="text" name="snome" placeholder="Sobrenome" required>
               </div>
               <div class="campo">
-                <input type="email" name="email" placeholder="Exemplo@dominio.com.br" required>
+                <input id="form1" type="email" name="email" placeholder="Exemplo@dominio.com.br" required>
               </div>
               <div class="campo">
-                <input type="tel" name="telefone" placeholder="ddd + Digitos" onkeyup="somenteNumeros(this);" required>
+                <input id="form1" type="tel" name="telefone" placeholder="ddd + Digitos" onkeyup="somenteNumeros(this);" required>
               </div>
               <div class="campo">
-                <textarea name="textarea" rows="6" cols="30" placeholder="Seu comentario aqui." required></textarea>
+                <textarea id="form1" name="textarea" rows="6" cols="30" placeholder="Seu comentario aqui." required></textarea>
               </div>
               <div class="campo">
                 <select class="desc-opcao" name="verifica" required>
