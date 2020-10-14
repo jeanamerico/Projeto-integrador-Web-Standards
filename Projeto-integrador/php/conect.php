@@ -1,10 +1,5 @@
 <?php
-$servidor= "localhost";
-$usuario= "root";
-$senha = "";
-$dbname= "projeto_integrador";
-
-$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+include('conectar.php');
 
 $nome = filter_input(INPUT_POST, 'nome');
 $sobrenome = filter_input(INPUT_POST, 'snome');

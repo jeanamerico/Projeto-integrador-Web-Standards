@@ -1,12 +1,7 @@
 <?php
 session_start();
 
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$dbname = "projeto_integrador";
-
-$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+include('conectar.php');
 
 if (empty($_POST['login']) || empty($_POST['passwd'])) {
     header('Location: ../html/login.html');

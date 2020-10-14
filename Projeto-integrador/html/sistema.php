@@ -1,5 +1,7 @@
 <?php
 include('../php/verifica.php');
+include('../php/conectar.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
@@ -31,11 +33,43 @@ include('../php/verifica.php');
         <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
       </div>
       <div class="conteudo-bd">
-        <td>
-          <tr></tr>
-        </td>
+        <table>
+          <tr>
+            <td>Nome</td>
+            <td>Sobrenome</td>
+            <td>E-mail</td>
+            <td>telefone</td>
+            <td>Mensagem</td>
+            <td>Opção</td>
+            <td>Termo</td>
+          </tr>
+          <?php
+          $sql = "SELECT * FROM formulario WHERE termo LIKE termo";
+          $resultado = mysqli_query($conn, $sql);
+
+          while ($registro = mysqli_fetch_array($resultado)) {
+            $nome = $registro['Nome'];
+            $sobrenome = $registro['Sobrenome'];
+            $email = $registro['Email'];
+            $telefone = $registro['Telefone'];
+            $mensagem = $registro['Mensagem'];
+            $opcao = $registro['Opcao'];
+            $termo = $registro['Termo'];
+            echo "<tr>";
+            echo "<td>" . $nome . "</td>";
+            echo "<td>" . $sobrenome . "</td>";
+            echo "<td>" . $email . "</td>";
+            echo "<td>" . $telefone . "</td>";
+            echo "<td>" . $mensagem . "</td>";
+            echo "<td>" . $opcao . "</td>";
+            echo "<td>" . $termo . "</td>";
+            echo "</tr>";
+          }
+          ?>
+
+        </table>
       </div>
-      
+
       <div class="rodape">
         <footer>
           <h1 class="cont-footer">Entrem em contato</h1>
