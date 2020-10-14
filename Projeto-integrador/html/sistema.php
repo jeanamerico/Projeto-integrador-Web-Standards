@@ -1,3 +1,6 @@
+<?php
+include('../php/verifica.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 
@@ -9,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style-default.css">
   <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/logon.css">
+  <link rel="stylesheet" href="../css/sistema.css">
 </head>
 
 <body>
@@ -18,21 +21,21 @@
       <li><a class="tabnav" href="../index.html">Home</a></li>
       <li><a class="tabnav" href="servicos.html">Serviços</a></li>
       <li><a class="tabnav" href="contato.html">Contato</a></li>
-      <li><a class="tabnav" href="login.html">Login</a></li>
+      <li><a class="tabnav" href="../php/logout.php">Sair</a></li>
     </ul>
   </div>
 
   <main>
     <div class="conteiner-geral">
-      <div class="login-page">
-        <div class="form">
-          <form name="login-form" class="formulario" action="../php/userform.php" method="POST">
-            <input name="login" type="text" placeholder="Usuario" />
-            <input name="passwd" type="password" placeholder="Senha" />
-            <button type="submit">login</button>
-          </form>
-        </div>
+      <div class="boavinda">
+        <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
       </div>
+      <div class="conteudo-bd">
+        <td>
+          <tr></tr>
+        </td>
+      </div>
+      
       <div class="rodape">
         <footer>
           <h1 class="cont-footer">Entrem em contato</h1>
