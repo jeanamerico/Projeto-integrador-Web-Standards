@@ -2,6 +2,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.apresentacao{
+    background: linear-gradient(90deg, rgba(17,85,119,1) 0%, rgba(255,255,255,0) 50%, rgba(17,85,119,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+
 .boavinda{
     margin: 5%;
     font-size: 150%
@@ -19,12 +25,6 @@ td{
 
 table{
     margin: 3%;
-}
-
-.apresentacao{
-    background: linear-gradient(90deg, rgba(17,85,119,1) 0%, rgba(255,255,255,0) 50%, rgba(17,85,119,1) 100%);
-    display: flex;
-    justify-content: center;
 }
 
 .rodape{

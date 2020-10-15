@@ -26,3 +26,4 @@ if ($row == 1) {
     header('location: ../html/login.html');
     exit();
 }
+?>

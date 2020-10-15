@@ -33,6 +33,17 @@ include('../php/conectar.php');
         <div class="boavinda">
           <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
         </div>
+        <div class='cadastrar-usuario'>
+        <?php
+        $sql = "SELECT nivel from userform WHERE nivel like nivel";//erro na seleção do banco?
+        $resultado = mysqli_query($conn, $sql);//n da echo
+        $teste = mysqli_fetch_array($resultado);
+        if($teste == 'administrador'){
+          echo "<a href='../php/cadastrar.php'>Cadastrar</a>";  
+        }
+        ?>
+        </div>
+        
       </div>
       <div class="conteudo-bd">
         <table>
