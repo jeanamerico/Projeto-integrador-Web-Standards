@@ -29,8 +29,10 @@ include('../php/conectar.php');
 
   <main>
     <div class="conteiner-geral">
-      <div class="boavinda">
-        <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
+      <div class="apresentacao">
+        <div class="boavinda">
+          <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
+        </div>
       </div>
       <div class="conteudo-bd">
         <table>
@@ -38,7 +40,7 @@ include('../php/conectar.php');
             <td>Nome</td>
             <td>Sobrenome</td>
             <td>E-mail</td>
-            <td>telefone</td>
+            <td>Telefone</td>
             <td>Mensagem</td>
             <td>Opção</td>
             <td>Termo</td>

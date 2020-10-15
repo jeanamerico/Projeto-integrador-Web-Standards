@@ -1,3 +1,39 @@
 .conteiner-geral{
     font-family: 'Roboto', sans-serif;
 }
+
+.boavinda{
+    margin: 5%;
+    font-size: 150%
+}
+
+.conteudo-bd{
+    display: flex;
+    justify-content: center;
+}
+
+td{
+    padding: 0 3%;
+    border: 1px solid #000;
+}
+
+table{
+    margin: 3%;
+}
+
+.apresentacao{
+    background: linear-gradient(90deg, rgba(17,85,119,1) 0%, rgba(255,255,255,0) 50%, rgba(17,85,119,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.rodape{
+    background-color: #157;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+  }
