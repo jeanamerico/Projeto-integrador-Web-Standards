@@ -1,6 +1,5 @@
 <?php
 include('../php/verifica.php');
-include('../php/conectar.php');
 
 ?>
 <!DOCTYPE html>
@@ -46,17 +45,18 @@ include('../php/conectar.php');
             <td>Termo</td>
           </tr>
           <?php
+          include('../php/conectar.php');
           $sql = "SELECT * FROM formulario WHERE termo LIKE termo";
           $resultado = mysqli_query($conn, $sql);
 
           while ($registro = mysqli_fetch_array($resultado)) {
-            $nome = $registro['Nome'];
-            $sobrenome = $registro['Sobrenome'];
-            $email = $registro['Email'];
-            $telefone = $registro['Telefone'];
-            $mensagem = $registro['Mensagem'];
-            $opcao = $registro['Opcao'];
-            $termo = $registro['Termo'];
+            $nome = $registro['nome'];
+            $sobrenome = $registro['snome'];
+            $email = $registro['email'];
+            $telefone = $registro['telefone'];
+            $mensagem = $registro['mensagem'];
+            $opcao = $registro['opcao'];
+            $termo = $registro['termo'];
             echo "<tr>";
             echo "<td>" . $nome . "</td>";
             echo "<td>" . $sobrenome . "</td>";
