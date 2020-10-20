@@ -34,15 +34,21 @@ include('../php/verifica.php');
         </div>
       </div>
       <div class="conteudo-bd">
+        <div class="conteiner-formulario">
+          <form class="formulario" action="">
+            <input id="form1" type="text" placeholder="Pesquise o email">
+            <button class="botao" type="submit">Pesquisar</button>
+          </form>
+        </div>
         <table>
-          <tr>
-            <td>Nome</td>
-            <td>Sobrenome</td>
-            <td>E-mail</td>
-            <td>Telefone</td>
-            <td>Mensagem</td>
-            <td>Opção</td>
-            <td>Termo</td>
+          <tr class="tabelatitulo">
+            <td class="tabelanomes">Nome</td>
+            <td class="tabelanomes">Sobrenome</td>
+            <td class="tabelanomes">E-mail</td>
+            <td class="tabelanomes">Telefone</td>
+            <td class="tabelanomes">Mensagem</td>
+            <td class="tabelanomes">Opção</td>
+            <td class="tabelanomes">Termo</td>
           </tr>
           <?php
           include('../php/conectar.php');
@@ -51,7 +57,7 @@ include('../php/verifica.php');
 
           while ($registro = mysqli_fetch_array($resultado)) {
             $nome = $registro['nome'];
-            $sobrenome = $registro['snome'];
+            $sobrenome = $registro['sobrenome'];
             $email = $registro['email'];
             $telefone = $registro['telefone'];
             $mensagem = $registro['mensagem'];
