@@ -27,19 +27,30 @@ include('../php/verifica.php');
 
   <main>
     <div class="conteiner-geral">
-    <div class="login-page">
+      <div class="login-page">
         <div class="form">
-          <form name="login-form" class="formulario" action="../php/caduser.php" method="POST">
-            <input name="login" type="text" placeholder="Usuario"/>
-            <input name="passwd" type="password" placeholder="Senha"/>
+          <p>Cadastrar novo usuario</p>
+          <form name="login-form" class="formulario" action="../php/sendbd.php" method="POST">
+            <input name="login" type="text" placeholder="Usuario" />
+            <input name="passwd" type="password" placeholder="Senha" />
             <div class="campo">
-                <select class="desc-opcao" name="verifica" required>
-                  <option value="Admin">Admin</option>
-                  <option value="Comum">Comum</option>
-                  <option value="Excluir">Excluir acesso</option>
-                </select>
-              </div>
+              <select class="desc-opcao" name="verifica" required>
+                <option value="Admin">Admin</option>
+                <option value="Comum">Comum</option>
+              </select>
+            </div>
             <button class="botao" type="submit">Registrar</button>
+          </form>
+        </div>
+        <div class="form">
+          <p>Excluir acesso</p>
+          <form name="login-form" class="formulario" action="../php/delete.php" method="POST">
+            <input name="login" type="text" placeholder="Usuario" />
+            <div class="campo">
+            <input name="Verifica"  type="checkbox" value="Excluir">
+                <label for="Checkbox">Excluir acesso</label>
+            </div>
+            <button class="botao" type="submit">Excluir</button>
           </form>
         </div>
       </div>
