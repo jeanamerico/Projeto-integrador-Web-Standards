@@ -19,7 +19,7 @@ include('../php/verifica.php');
   <div class="row">
     <ul class="subnav">
       <li><a class="tabnav" href="index.php">Home</a></li>
-      <li><a class="tabnav" href="caduser.php">Cadastrar usuario</a></li>
+      <li><a class="tabnav" href="cadastro.php">Cadastrar usuario</a></li>
       <li><a class="tabnav" href="sistema.php">Solicitações</a></li>
       <li><a class="tabnav" href="../php/logout.php">Sair</a></li>
     </ul>

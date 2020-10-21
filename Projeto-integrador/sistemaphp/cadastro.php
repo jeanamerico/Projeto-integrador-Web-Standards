@@ -19,7 +19,7 @@ include('../php/verifica.php');
   <div class="row">
     <ul class="subnav">
       <li><a class="tabnav" href="index.php">Home</a></li>
-      <li><a class="tabnav" href="caduser.php">Cadastrar usuario</a></li>
+      <li><a class="tabnav" href="cadastro.php">Cadastrar usuario</a></li>
       <li><a class="tabnav" href="sistema.php">Solicitações</a></li>
       <li><a class="tabnav" href="../php/logout.php">Sair</a></li>
     </ul>
@@ -29,10 +29,17 @@ include('../php/verifica.php');
     <div class="conteiner-geral">
     <div class="login-page">
         <div class="form">
-          <form name="login-form" class="formulario" action="" method="POST">
+          <form name="login-form" class="formulario" action="../php/caduser.php" method="POST">
             <input name="login" type="text" placeholder="Usuario"/>
-            <input name="passwd" type="password" placeholder="Senha"/><!--adicionar nivel de acesso-->
-            <button type="submit">Registrar</button>
+            <input name="passwd" type="password" placeholder="Senha"/>
+            <div class="campo">
+                <select class="desc-opcao" name="verifica" required>
+                  <option value="Admin">Admin</option>
+                  <option value="Comum">Comum</option>
+                  <option value="Excluir">Excluir acesso</option>
+                </select>
+              </div>
+            <button class="botao" type="submit">Registrar</button>
           </form>
         </div>
       </div>
