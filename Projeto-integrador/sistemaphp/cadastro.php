@@ -45,9 +45,9 @@ include('../php/verifica.php');
         <div class="form">
           <p>Excluir acesso</p>
           <form name="login-form" class="formulario" action="../php/delete.php" method="POST">
-            <input name="login" type="text" placeholder="Usuario" />
+            <input name="usuario" type="text" placeholder="Usuario" />
             <div class="campo">
-            <input name="Verifica"  type="checkbox" value="Excluir">
+            <input name="Verificaex"  type="checkbox" value="Excluir"">
                 <label for="Checkbox">Excluir acesso</label>
             </div>
             <button class="botao" type="submit">Excluir</button>

@@ -1,13 +1,13 @@
 <?php
 include('conectar.php');
 
-$login = filter_input(INPUT_POST, 'login');
-$nivel = filter_input(INPUT_POST, 'verifica');
+$usuario = filter_input(INPUT_POST, 'usuario');
+$nivel = filter_input(INPUT_POST, 'Verificaex');
 
 
 if($nivel == 'Excluir') {
-    $deletedb = "DELETE FROM userform WHERE usuario LIKE ('$login')";
-    $resutadofinal = mysqli_query($conn, $inserirbd);
+    $deletedb = "DELETE FROM userform WHERE id = '3'";//Exluir por nome e não por ID
+    $resutadofinal = mysqli_query($conn, $deletedb);
     if(mysqli_insert_id($conn)){
         header("Location: ../sistemaphp/cadastro.php");
     }
