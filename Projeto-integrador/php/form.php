@@ -1,5 +1,5 @@
 <?php
-include('conectar.php');
+include('conectar.php'); //verificar formulario de envio.
 
 $nome = filter_input(INPUT_POST, 'nome');
 $sobrenome = filter_input(INPUT_POST, 'snome');
@@ -13,8 +13,8 @@ if($termuso == 'Concordo' && $verif == 'Consultoria' || $verif == 'Transporte' |
     $inserirbd = "INSERT INTO formulario VALUES ('', '$nome', '$sobrenome', '$email', '$tel', '$msg', '$verif', '$termuso')";
     $resutadofinal = mysqli_query($conn, $inserirbd);
     if(mysqli_insert_id($conn)){
-    header("Location: ../sistemaphp/cadastro.php");
+    header("Location: ../html/contato.html");
     }
 }
-header("Location: ../sistemaphp/index.php");
+header("Location: ../index.html");
 ?>

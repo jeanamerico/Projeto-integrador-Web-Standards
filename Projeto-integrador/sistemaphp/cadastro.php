@@ -47,8 +47,8 @@ include('../php/verifica.php');
           <form name="login-form" class="formulario" action="../php/delete.php" method="POST">
             <input name="usuario" type="text" placeholder="Usuario" />
             <div class="campo">
-            <input name="Verificaex"  type="checkbox" value="Excluir"">
-                <label for="Checkbox">Excluir acesso</label>
+            <input name="Verificaex"  type="checkbox" value="Excluir">
+                <label for="Checkbox">Excluir acesso</label> <!--checkbox js-->
             </div>
             <button class="botao" type="submit">Excluir</button>
           </form>
