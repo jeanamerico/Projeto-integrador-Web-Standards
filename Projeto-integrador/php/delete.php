@@ -4,14 +4,12 @@ include('conectar.php');
 $usuario = filter_input(INPUT_POST, 'usuario');
 $nivel = filter_input(INPUT_POST, 'Verificaex');
 
-
 if($nivel == 'Excluir') {
-    $deletedb = "DELETE FROM userform WHERE id = '3'";//Exluir por nome e não por ID
+    $deletedb = "DELETE FROM userform WHERE usuario = '$usuario' ORDER BY id DESC LIMIT 1";
     $resutadofinal = mysqli_query($conn, $deletedb);
     if(mysqli_insert_id($conn)){
-        header("Location: ../sistemaphp/cadastro.php");
+        header("Location: ../sistemaphp/index.php");
     }
-header("Location: ../sistemaphp/index.php");   
+header("Location: ../sistemaphp/cadastro.php ");   
 }
-
 ?>

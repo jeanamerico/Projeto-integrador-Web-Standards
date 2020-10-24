@@ -1,5 +1,5 @@
 <?php
-include('../php/verifica.php');
+include('../php/verifica.php'); //mudar para excluir cadastro 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">

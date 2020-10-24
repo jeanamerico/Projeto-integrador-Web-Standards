@@ -1,5 +1,5 @@
 <?php
-include('conectar.php'); //verificar formulario de envio.
+include('conectar.php');
 
 $nome = filter_input(INPUT_POST, 'nome');
 $sobrenome = filter_input(INPUT_POST, 'snome');

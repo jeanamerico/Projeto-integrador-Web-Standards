@@ -1,6 +1,8 @@
 <?php
 include('../php/verifica.php');
+include('../php/admcomp.php')
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
 
@@ -13,6 +15,7 @@ include('../php/verifica.php');
   <link rel="stylesheet" href="/css/style-default.css">
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="../css/cad-user.css">
+  <script src="../js/validasistema.js"></script>
 </head>
 
 <body>
@@ -46,10 +49,6 @@ include('../php/verifica.php');
           <p>Excluir acesso</p>
           <form name="login-form" class="formulario" action="../php/delete.php" method="POST">
             <input name="usuario" type="text" placeholder="Usuario" />
-            <div class="campo">
-            <input name="Verificaex"  type="checkbox" value="Excluir">
-                <label for="Checkbox">Excluir acesso</label> <!--checkbox js-->
-            </div>
             <button class="botao" type="submit">Excluir</button>
           </form>
         </div>

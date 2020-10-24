@@ -1,5 +1,5 @@
 /*
-fazer sistema de coleta de dados e localização
+fazer sistema de coleta de dados e localização em php
 */
 
 function somenteNumeros(num) {
@@ -19,7 +19,6 @@ function validar() {
     var email = formulario.email.value;
     var telefone = formulario.telefone.value;
     var textarea = formulario.textarea.value;
-    let d = new Date();
 
     if (nome.length < 3) {
         alert('Informe seu nome');

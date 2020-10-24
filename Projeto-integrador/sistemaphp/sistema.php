@@ -2,6 +2,7 @@
 include('../php/verifica.php');
 include('../php/conectar.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 
@@ -51,7 +52,7 @@ include('../php/conectar.php');
             <td class="tabelanomes">Termo</td>
           </tr>
           <?php
-          $sql = "SELECT * FROM formulario WHERE termo LIKE termo";
+          $sql = "SELECT * FROM formulario";
           $resultado = mysqli_query($conn, $sql);
 
           while ($registro = mysqli_fetch_array($resultado)) {
