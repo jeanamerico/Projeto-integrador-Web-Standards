@@ -31,7 +31,7 @@ include('../php/conectar.php');
     <div class="conteiner-geral">
       <div class="apresentacao">
         <div class="boavinda">
-          <h2>Olá, <?php echo $_SESSION['usuario'];?></h2>
+          <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
         </div>
       </div>
       <div class="conteudo-bd">
@@ -52,9 +52,12 @@ include('../php/conectar.php');
             <td class="tabelanomes">Termo</td>
           </tr>
           <?php
-          $sql = "SELECT * FROM formulario";
+          $resultpesq = $_POST['emailpesq'];
+          $sql = "SELECT * FROM formulario where email like '$resultpesq'";
           $resultado = mysqli_query($conn, $sql);
-
+          if($resultado == NULL || $resultpesq == NULL){
+            echo("Favor informar um email valido para a pesquisa");
+          }
           while ($registro = mysqli_fetch_array($resultado)) {
             $nome = $registro['nome'];
             $sobrenome = $registro['sobrenome'];
@@ -73,6 +76,7 @@ include('../php/conectar.php');
             echo "<td>" . $termo . "</td>";
             echo "</tr>";
           }
+
           ?>
 
         </table>
