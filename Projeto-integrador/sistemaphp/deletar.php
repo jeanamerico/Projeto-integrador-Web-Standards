@@ -1,6 +1,5 @@
 <?php
-include('../php/verifica.php');
-include('../php/admcomp.php')
+include('../php/conectar.php')
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +13,7 @@ include('../php/admcomp.php')
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style-default.css">
   <link rel="stylesheet" href="/css/footer.css">
-  <link rel="stylesheet" href="../css/cad-user.css">
+  <link rel="stylesheet" href="/css/del-user.css">
 </head>
 
 <body>
@@ -29,20 +28,33 @@ include('../php/admcomp.php')
 
   <main>
     <div class="conteiner-geral">
-      <div class="login-page">
+      <div class="delete-page">
         <div class="form">
-          <p>Cadastrar novo usuario</p>
-          <form name="login-form" class="formulario" action="../php/sendbd.php" method="POST">
-            <input name="login" type="text" placeholder="Usuario" />
-            <input name="passwd" type="password" placeholder="Senha" />
-            <div class="campo">
-              <select class="desc-opcao" name="verifica" required>
-                <option value="Admin">Admin</option>
-                <option value="Comum">Comum</option>
-              </select>
-            </div>
-            <button class="botao" type="submit">Registrar</button>
-          </form>
+          <table>
+            <p>Excluir acesso</p>
+            <tr class="tabelatitulo">
+              <td class="tabelausuario">id</td>
+              <td class="tabelausuario">Usuario</td>
+              <td class="tabelausuario">Nivel</td>
+              <td class="tabelausuario">Deletar</td>
+            </tr>
+            <?php
+            $sql = "SELECT * FROM userform";
+            $resultado = mysqli_query($conn, $sql);
+
+            while ($registro = mysqli_fetch_array($resultado)) {
+              $id = $registro['id'];
+              $user = $registro['usuario'];
+              $level = $registro['nivel'];
+              echo "<tr>";
+              echo "<td>" . $id . "</td>";
+              echo "<td>" . $user . "</td>";
+              echo "<td>" . $level . "</td>";
+              echo "<td>" . "<a href=../php/delete.php?id=$registro[id]\" onclick=\" return confirm('Tem certeza que deseja excluir o cadastro?')\"><img src=../img/icons/Delete.png></a>" . "</td>";
+              echo "</tr>";
+            }
+            ?>
+          </table>
         </div>
       </div>
       <div class="rodape">
