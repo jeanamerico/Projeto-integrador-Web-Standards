@@ -1,7 +1,6 @@
 <?php
 include('../php/verifica.php');
 include('../php/conectar.php');
-include('../php/pesquisacampo.php');
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +37,7 @@ include('../php/pesquisacampo.php');
       <div class="conteudo-bd">
         <table>
           <div class="conteiner-formulario">
-            <form class="formulario" action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar" method="POST">
+            <form class="formulario" action="../php/pesquisacampo.php" method="POST">
               <input id="form1" name="emailpesq" type="text" placeholder="Pesquise o email">
               <button class="botao" type="submit">Pesquisar</button> <!--adicionar funão no botao-->
             </form>
@@ -55,7 +54,6 @@ include('../php/pesquisacampo.php');
           <?php
           $sql = "SELECT * FROM formulario";
           $resultado = mysqli_query($conn, $sql);
-          $pesquisaresult = mysqli_query($conn, $select);
 
           while ($registro = mysqli_fetch_array($resultado)) {
             $nome = $registro['nome'];
