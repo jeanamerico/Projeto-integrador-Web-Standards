@@ -13,7 +13,6 @@ function somenteNumeros(num) {
 
 
 function validar() {
-
     var nome = formulario.nome.value;
     var snome = formulario.snome.value;
     var email = formulario.email.value;

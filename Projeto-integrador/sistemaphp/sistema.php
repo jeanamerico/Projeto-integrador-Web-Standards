@@ -1,6 +1,7 @@
 <?php
 include('../php/verifica.php');
 include('../php/conectar.php');
+include('../php/pesquisacampo.php');
 ?>
 
 <!DOCTYPE html>
@@ -31,17 +32,17 @@ include('../php/conectar.php');
     <div class="conteiner-geral">
       <div class="apresentacao">
         <div class="boavinda">
-          <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
+          <h2>Olá, <?php echo $_SESSION['usuario'];?></h2>
         </div>
       </div>
       <div class="conteudo-bd">
-        <div class="conteiner-formulario">
-          <form class="formulario" action="">
-            <input id="form1" type="text" placeholder="Pesquise o email">
-            <button class="botao" type="submit">Pesquisar</button> <!--adicionar funão no botao-->
-          </form>
-        </div>
         <table>
+          <div class="conteiner-formulario">
+            <form class="formulario" action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar" method="POST">
+              <input id="form1" name="emailpesq" type="text" placeholder="Pesquise o email">
+              <button class="botao" type="submit">Pesquisar</button> <!--adicionar funão no botao-->
+            </form>
+          </div>
           <tr class="tabelatitulo">
             <td class="tabelanomes">Nome</td>
             <td class="tabelanomes">Sobrenome</td>
@@ -54,6 +55,7 @@ include('../php/conectar.php');
           <?php
           $sql = "SELECT * FROM formulario";
           $resultado = mysqli_query($conn, $sql);
+          $pesquisaresult = mysqli_query($conn, $select);
 
           while ($registro = mysqli_fetch_array($resultado)) {
             $nome = $registro['nome'];
