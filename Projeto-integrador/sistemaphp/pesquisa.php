@@ -23,8 +23,6 @@ include('../php/conectar.php');
       <?php
       include('../php/admcomp.php');
       ?>
-      <li><a class="tabnav" href="sistema.php">Solicitações</a></li>
-      <li><a class="tabnav" href="../php/logout.php">Sair</a></li>
     </ul>
   </div>
 
