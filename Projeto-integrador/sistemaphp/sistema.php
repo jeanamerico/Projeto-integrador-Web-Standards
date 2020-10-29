@@ -1,8 +1,3 @@
-<?php
-include('../php/verifica.php');
-include('../php/conectar.php');
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 
@@ -20,8 +15,9 @@ include('../php/conectar.php');
 <body>
   <div class="row">
     <ul class="subnav">
-      <li><a class="tabnav" href="deletar.php">Excluir usuario</a></li>
-      <li><a class="tabnav" href="cadastro.php">Cadastrar usuario</a></li>
+      <?php
+      include('../php/admcomp.php');
+      ?>
       <li><a class="tabnav" href="sistema.php">Solicitações</a></li>
       <li><a class="tabnav" href="../php/logout.php">Sair</a></li>
     </ul>
