@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 include('conectar.php');
 
 if (empty($_POST['login']) || empty($_POST['passwd'])) {
