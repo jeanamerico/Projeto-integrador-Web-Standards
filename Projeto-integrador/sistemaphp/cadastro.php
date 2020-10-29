@@ -1,5 +1,5 @@
 <?php
-include('../php/conectar.php')
+include('../php/conectar.php');
 ?>
 
 <!DOCTYPE html>
