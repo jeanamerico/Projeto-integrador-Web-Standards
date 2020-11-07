@@ -1,6 +1,5 @@
 <?php
 include('../php/conectar.php');
-include('../php/verficadm.php');
 ?>
 
 <!DOCTYPE html>
@@ -29,20 +28,33 @@ include('../php/verficadm.php');
   <main>
     <div class="conteiner-geral">
       <div class="login-page">
-        <div class="form">
-          <p>Cadastrar novo usuario</p>
-          <form name="login-form" class="formulario" action="../php/sendbd.php" method="POST">
-            <input name="login" type="text" placeholder="Usuario" />
-            <input name="passwd" type="password" placeholder="Senha" />
-            <div class="campo">
-              <select class="desc-opcao" name="verifica" required>
-                <option value="Admin">Admin</option>
-                <option value="Comum">Comum</option>
-              </select>
-            </div>
-            <button class="botao" type="submit">Registrar</button>
-          </form>
-        </div>
+        <?php
+        $sql = "SELECT usuario,nivel FROM userform WHERE usuario LIKE '$_SESSION[usuario]'";
+        $resultconfiradm = mysqli_query($conn, $sql);
+        $verificador = mysqli_fetch_array($resultconfiradm);
+        
+        $nivel = $verificador['nivel'];
+        if ($nivel == 'Admin') {
+          echo "        
+          <div class='form'>
+            <p>Cadastrar novo usuario</p>
+            <form name='login-form' class='formulario' action='../php/sendbd.php' method='POST'>
+              <input name='login' type='text' placeholder='Usuario' />
+              <input name='passwd' type='password' placeholder='Senha' />
+              <div class='campo'>
+                <select class='desc-opcao' name='verifica' required>
+                <option value='Admin'>Admin</option>
+                <option value='Comum'>Comum</option>
+                </select>
+              </div>
+              <button class='botao' type='submit'>Registrar</button>
+            </form>
+          </div>";
+        }else{
+          echo "Mensagem de erro generica";
+        }
+        ?>
+
       </div>
       <div class="rodape">
         <footer>

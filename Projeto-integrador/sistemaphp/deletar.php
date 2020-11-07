@@ -1,6 +1,5 @@
 <?php
 include('../php/conectar.php');
-include('../php/verficadm.php');
 ?>
 
 <!DOCTYPE html>
@@ -29,33 +28,43 @@ include('../php/verficadm.php');
   <main>
     <div class="conteiner-geral">
       <div class="delete-page">
-        <div class="form">
+        <?php
+        $sql = "SELECT usuario,nivel FROM userform WHERE usuario LIKE '$_SESSION[usuario]'";
+        $resultconfiradm = mysqli_query($conn, $sql);
+        $verificador = mysqli_fetch_array($resultconfiradm);
+
+        $nivel = $verificador['nivel'];
+        if ($nivel == 'Admin') {
+          echo "
+          <div class='form'>
           <table>
             <p>Excluir acesso</p>
-            <tr class="tabelatitulo">
-              <td class="tabelausuario">id</td>
-              <td class="tabelausuario">Usuario</td>
-              <td class="tabelausuario">Nivel</td>
-              <td class="tabelausuario">Deletar</td>
-            </tr>
-            <?php
-            $sql = "SELECT * FROM userform";
-            $resultado = mysqli_query($conn, $sql);
+            <tr class='tabelatitulo'>
+              <td class='tabelausuario'>id</td>
+              <td class='tabelausuario'>Usuario</td>
+              <td class='tabelausuario'>Nivel</td>
+              <td class='tabelausuario'>Deletar</td>
+            </tr>";
 
-            while ($registro = mysqli_fetch_array($resultado)) {
-              $id = $registro['id'];
-              $user = $registro['usuario'];
-              $level = $registro['nivel'];
-              echo "<tr>";
-              echo "<td>" . $id . "</td>";
-              echo "<td>" . $user . "</td>";
-              echo "<td>" . $level . "</td>";
-              echo "<td>" . "<a href=../php/delete.php?id=$registro[id]\" onclick=\" return confirm('Tem certeza que deseja excluir o cadastro?')\"><img src=../img/icons/Delete.png></a>" . "</td>";
-              echo "</tr>";
-            }
-            ?>
-          </table>
-        </div>
+          $sql = 'SELECT * FROM userform';
+          $resultado = mysqli_query($conn, $sql);
+
+          while ($registro = mysqli_fetch_array($resultado)) {
+            $id = $registro['id'];
+            $user = $registro['usuario'];
+            $level = $registro['nivel'];
+            echo "<tr>";
+            echo "<td>" . $id . "</td>";
+            echo "<td>" . $user . "</td>";
+            echo "<td>" . $level . "</td>";
+            echo "<td>" . "<a href=../php/delete.php?id=$registro[id]\" onclick=\" return confirm('Tem certeza que deseja excluir o cadastro?')\"><img src=../img/icons/Delete.png></a>" . "</td>";
+            echo "</tr>";
+          }
+        } else {
+          echo "Mensagem de erro generica";
+        }
+        ?>
+        </table>
       </div>
       <div class="rodape">
         <footer>
