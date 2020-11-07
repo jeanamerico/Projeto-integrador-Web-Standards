@@ -1,5 +1,6 @@
 <?php
 include('../php/conectar.php');
+include('../php/verficadm.php');
 ?>
 
 <!DOCTYPE html>
