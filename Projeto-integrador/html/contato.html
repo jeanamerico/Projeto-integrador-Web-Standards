@@ -45,10 +45,10 @@
           <form name="formulario" class="formulario" action="../php/form.php" method="POST">
             <fieldset class="grupo">
               <div class="campo">
-                <input id="form1" type="text"  name="nome" placeholder="Nome" required>
+                <input id="form1" type="text"  name="nome" placeholder="Nome" onkeyup="apenasnome(this);" required>
               </div>
               <div class="campo">
-                <input id="form1" type="text" name="snome" placeholder="Sobrenome" required>
+                <input id="form1" type="text" name="snome" placeholder="Sobrenome" onkeyup="apenasnome(this);" required>
               </div>
               <div class="campo">
                 <input id="form1" type="email" name="email" placeholder="Exemplo@dominio.com.br" required>
@@ -57,7 +57,7 @@
                 <input id="form1" type="tel" name="telefone" placeholder="ddd + Digitos" onkeyup="somenteNumeros(this);" required>
               </div>
               <div class="campo">
-                <textarea id="form1" name="textarea" rows="6" cols="30" placeholder="Seu comentario aqui." required></textarea>
+                <textarea id="form1" name="textarea" rows="6" cols="30" placeholder="Seu comentario aqui." onkeyup="apenasnome(this);" required></textarea>
               </div>
               <div class="campo">
                 <select class="desc-opcao" name="verifica" required>
