@@ -1,8 +1,4 @@
-.conteiner-geral{
-  font-family: 'Roboto', sans-serif;
-}
-
-.img-servicos{
+.img-servicos {
   min-height: 490px;
   background-image: url(../img/servicos/servicos-slogan.jpg);
   background-size: auto auto;
@@ -10,7 +6,7 @@
   background-repeat: no-repeat;
 }
 
-.txt-servicos{
+.txt-servicos {
   text-align: center;
   text-decoration: none;
   color: #fff;
@@ -18,13 +14,13 @@
   padding: 10%;
 }
 
-.desc-serv{
+.desc-serv {
   text-align: center;
   font-size: 300%;
   margin: 2% 20%;
 }
 
-.service{
+.service {
   display: flex;
   justify-content: center;
   margin: 2% 20%;
@@ -32,17 +28,17 @@
   font-size: 100%;
 }
 
-.txt-serv{
+.txt-serv {
   font-size: 90%;
 }
 
-.img-serv{
+.img-serv {
   display: flex;
   justify-content: center;
   padding: 5%;
 }
 
-.serv{
+.serv {
   text-align: center;
   margin: 0 5%
 }

@@ -1,71 +1,65 @@
-.conteiner-geral{
-    font-family: 'Roboto', sans-serif;
+.apresentacao {
+  background: linear-gradient(90deg, rgba(17, 85, 119, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(17, 85, 119, 1) 100%);
+  display: flex;
+  justify-content: center;
 }
 
-.apresentacao{
-    background: linear-gradient(90deg, rgba(17,85,119,1) 0%, rgba(255,255,255,0) 50%, rgba(17,85,119,1) 100%);
-    display: flex;
-    justify-content: center;
+.boavinda {
+  margin: 5%;
+  font-size: 150%
 }
 
-.boavinda{
-    margin: 5%;
-    font-size: 150%
+.conteudo-bd {
+  display: flex;
+  justify-content: center;
 }
 
-.conteudo-bd{
-    display: flex;
-    justify-content: center;
+.tabelatitulo {
+  background-color: #157;
+  color: #fff;
+  border: none;
 }
 
-.tabelatitulo{
-    background-color: #157;
-    color: #fff;
-    border: none;
+.tabelanomes {
+  border: none;
 }
 
-.tabelanomes{
-    border: none;
-}
-
-td{
-    padding: 0 3%;
-    border-bottom: 1px solid #000;
+td {
+  padding: 0 3%;
+  border-bottom: 1px solid #000;
 }
 
 .conteiner-formulario {
-    position: absolute;
-    margin: 1% 0;
-  }
-  
-  #form1{
-    margin: 1% 0;
-    border: none;
-    border-bottom: 1px solid #000;
-    background: rgba(0,0,0,0);
-    opacity: 1;
-    border-radius: 5px;
-    resize: none;
-  }
-  
-  div .botao {
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    color: #000;
-    font-weight: bold;
-  } 
-
-table{
-    margin: 3%;
+  position: absolute;
+  margin: 1% 0;
 }
 
-.rodape{
-    background-color: #157;
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-  }
+#form1 {
+  margin: 1% 0;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: rgba(0, 0, 0, 0);
+  opacity: 1;
+}
+
+div .botao {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: #000;
+  font-weight: bold;
+}
+
+div .botao:hover {
+  cursor: pointer;
+}
+
+table {
+  margin: 3%;
+}
+
+.rodape {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}

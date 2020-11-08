@@ -1,14 +1,10 @@
-  .conteiner-geral{
-    font-family: 'Roboto', sans-serif;
-  }
-    
   .delete-page {
     display: flex;
     width: 360px;
     padding: 8% 0 0;
     margin: 0 35%;
   }
-  
+
   .form {
     display: grid;
     background: #FFFFFF;
@@ -18,7 +14,7 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
 
-  td{
+  td {
     padding: 2% 10%;
     border-bottom: 1px solid #000;
   }
@@ -26,16 +22,12 @@
   body {
     background-image: url(../img/login/cad-user.png);
   }
-  
-  img{
+
+  img {
     width: 100%;
   }
 
-  .rodape{
-    background-color: #157;
-    display: flex;
-    justify-content: center;
-    color: #fff;
+  .rodape {
     bottom: 0;
     position: fixed;
     width: 100%;

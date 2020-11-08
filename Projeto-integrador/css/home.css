@@ -1,28 +1,24 @@
-.conteiner-geral{
-  font-family: 'Roboto', sans-serif;
-}
-
-.titulo{
+.titulo {
   color: #000;
   text-decoration: none;
   font-size: 250%;
 }
 
-.desc{
+.desc {
   color: #000;
   text-decoration: none;
   font-size: 100%;
 }
 
-.espacamento{
+.espacamento {
   margin: 5% 0;
 }
 
-.separador{
+.separador {
   margin: 3% 0;
 }
 
-.imagem-slogan{
+.imagem-slogan {
   min-height: 490px;
   background-image: url(../img/home/transporte_caminhao.jpg);
   background-size: auto auto;
@@ -30,7 +26,7 @@
   background-repeat: no-repeat;
 }
 
-.imagem-txt{
+.imagem-txt {
   text-decoration: none;
   font-size: 180%;
   color: #fff;
@@ -38,25 +34,25 @@
   padding: 10%;
 }
 
-.conteiner-tecnologia{
+.conteiner-tecnologia {
   display: flex;
   justify-content: center;
   margin: 0 20%;
 }
 
-.conteiner-carga{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin: 0 20%;
+.conteiner-carga {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin: 0 20%;
 }
 
-.conteiner-parceiros{
+.conteiner-parceiros {
   display: flex;
   justify-content: center;
   margin: 0 20%;
 }
 
-.parceiro-img{
+.parceiro-img {
   max-width: 500px;
 }

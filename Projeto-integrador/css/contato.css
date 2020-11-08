@@ -1,8 +1,4 @@
-.conteiner-geral{
-  font-family: 'Roboto', sans-serif;
-}
-
-.conteiner-m-f{
+.conteiner-m-f {
   margin: 2%;
   display: flex;
 }
@@ -13,14 +9,14 @@ li {
 
 select.desc-opcao {
   width: 100%;
-  margin:5%;
+  margin: 5%;
   border: none;
   border-bottom: 1px solid #000;
   border-radius: 5px;
   font-size: 120%;
 }
 
-.img-contato{
+.img-contato {
   min-height: 490px;
   background-image: url(../img/contato/faleconosco.jpg);
   background-size: cover;
@@ -28,7 +24,7 @@ select.desc-opcao {
   background-repeat: no-repeat;
 }
 
-.txt-contato{
+.txt-contato {
   text-align: center;
   text-decoration: none;
   color: #fff;
@@ -45,12 +41,12 @@ select.desc-opcao {
   padding: 3%;
 }
 
-#form1, textarea{
+#form1, textarea {
   padding: 4%;
   width: 100%;
   border: none;
   border-bottom: 1px solid #000;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   opacity: 1;
   border-radius: 5px;
   resize: none;
@@ -64,6 +60,6 @@ div .botao {
   font-weight: bold;
 }
 
-div .botao:hover{
+div .botao:hover {
   cursor: pointer;
 }

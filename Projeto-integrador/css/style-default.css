@@ -1,3 +1,7 @@
+.conteiner-geral {
+  font-family: 'Roboto', sans-serif;
+}
+
 .subnav {
   position: relative;
   display: flex;
@@ -16,7 +20,7 @@
   justify-content: center;
 }
 
-.tabnav:hover{
+.tabnav:hover {
   position: fixed;
   border-bottom: 2px solid #fff;
   font-size: 130%;

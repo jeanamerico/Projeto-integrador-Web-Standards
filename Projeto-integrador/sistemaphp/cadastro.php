@@ -51,7 +51,10 @@ include('../php/conectar.php');
             </form>
           </div>";
         }else{
-          echo "Mensagem de erro generica";
+          echo "
+          <div class='form'>
+          <p>Erro 401 favor verificar seu nivel de acesso!</p>
+          </div>";
         }
         ?>
 
