@@ -1,17 +1,17 @@
 function somenteNumeros(num) {
-    var er = /[^0-9.]/;
+    const er = /[^0-9.]/;
     er.lastIndex = 0;
     var campo = num;
     if (er.test(campo.value)) {
-      campo.value = "";
+        campo.value = "";
     }
 }
 
-function apenasnome(name){//adicionar o regex para cancelar {}<>
-    var nome = / /;
+function apenasnome(name) {//adicionar o regex para cancelar {}<>
+    var nome = /[<>{}]/;
     nome.lastIndex = 0;
     var campo = name;
-    if (nome.test(campo.value)){
+    if (nome.test(campo.value)) {
         campo.value = "";
     }
 }
@@ -20,7 +20,7 @@ function validar() {
     var email = formulario.email.value;
     var telefone = formulario.telefone.value;
 
-    if (email.indexOf('@') < 0 || email.indexOf('.com') == -1 ) {
+    if (email.indexOf('@') < 0 || email.indexOf('.com') == -1) {
         alert('Informe seu email correto!');
         formulario.email.focus();
         return false;
