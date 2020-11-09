@@ -1,0 +1,33 @@
+.form {
+  display: grid;
+  background: #FFFFFF;
+  max-width: 450px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+.rodape {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+
+body {
+  background-image: url(../img/login/cad-user.png);
+}
+
+
+img {
+  width: 100%;
+}
+
+.default-page {
+  display: flex;
+  width: 360px;
+  padding: 8% 0 0;
+  margin: 0 40%;
+}

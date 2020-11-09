@@ -12,6 +12,7 @@ include('../php/conectar.php');
   <link rel="stylesheet" href="/css/reset.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style-default.css">
+  <link rel="stylesheet" href="/css/default-php.css">
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="../css/cad-user.css">
 </head>
@@ -27,7 +28,7 @@ include('../php/conectar.php');
 
   <main>
     <div class="conteiner-geral">
-      <div class="login-page">
+      <div class="default-page">
         <?php
         $sql = "SELECT usuario,nivel FROM userform WHERE usuario LIKE '$_SESSION[usuario]'";
         $resultconfiradm = mysqli_query($conn, $sql);
