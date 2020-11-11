@@ -13,8 +13,8 @@ if($termuso == 'Concordo' && $verif == 'Consultoria' || $verif == 'Transporte' |
     $inserirbd = "INSERT INTO formulario VALUES ('', '$nome', '$sobrenome', '$email', '$tel', '$msg', '$verif', '$termuso')";
     $resutadofinal = mysqli_query($conn, $inserirbd);
     if(mysqli_insert_id($conn)){
-    header("Location: ../html/contato.html");
+    header("Location: ../user/contato.php");
     }
 }
-header("Location: ../index.html");
+header("Location: ../user/index.php");
 ?>

@@ -7,6 +7,15 @@ select.desc-opcao {
   font-size: 120%;
 }
 
+.form {
+  display: grid;
+  background: #FFFFFF;
+  max-width: 450px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
 .form input {
   background: #f2f2f2;
   border: 0;
@@ -29,4 +38,16 @@ select.desc-opcao {
 
 .form button:hover, .form button:active, .form button:focus {
   background: #43A047;
+}
+
+.default-page {
+  display: flex;
+  width: 360px;
+  padding: 8% 0 0;
+  margin: 0 40%;
+}
+
+.rodape{
+  position: fixed;
+  bottom: 0;
 }

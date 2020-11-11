@@ -1,5 +1,4 @@
 .apresentacao {
-  background: linear-gradient(90deg, rgba(17, 85, 119, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(17, 85, 119, 1) 100%);
   display: flex;
   justify-content: center;
 }
@@ -8,30 +7,22 @@
   margin: 5%;
   font-size: 150%
 }
-
-.conteudo-bd {
-  display: flex;
-  justify-content: center;
-}
-
-.tabelatitulo {
-  background-color: #157;
-  color: #fff;
-  border: none;
-}
-
-.tabelanomes {
-  border: none;
-}
-
 td {
   padding: 0 3%;
   border-bottom: 1px solid #000;
 }
 
+.default-page {
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .conteiner-formulario {
-  position: absolute;
-  margin: 1% 0;
+  display: flex;
+  justify-content: center;
 }
 
 #form1 {
@@ -57,9 +48,27 @@ table {
   margin: 3%;
 }
 
+.nome {
+  flex-basis: 5%;
+}
+.sobrenome {
+  flex-basis: 5%;
+}
+.email {
+  flex-basis: 10%;
+}
+.telefone {
+  flex-basis: 5%;
+}
+.mensagem {
+  flex-basis: 5%;
+}
+.termo {
+  flex-basis: 5%;
+}
+
+
 .rodape {
-  bottom: 0;
-  position: fixed;
   width: 100%;
   text-align: center;
 }

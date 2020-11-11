@@ -14,6 +14,7 @@ include('../php/conectar.php');
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style-default.css">
   <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/default-php.css">
   <link rel="stylesheet" href="../css/sistema.css">
 </head>
 
@@ -28,69 +29,68 @@ include('../php/conectar.php');
 
   <main>
     <div class="conteiner-geral">
-      <div class="apresentacao">
-        <div class="boavinda">
-          <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
-        </div>
-      </div>
-      <div class="conteudo-bd">
-        <table>
-          <div class="conteiner-formulario">
-            <form class="formulario" action="pesquisa.php" method="POST">
-              <input id="form1" name="emailpesq" type="text" placeholder="Pesquise o email">
-              <button class="botao" type="submit">Pesquisar</button>
-            </form>
+      <div class="default-page">
+        <div class="apresentacao">
+        
+          <div class="boavinda">
+            <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
           </div>
-          <tr class="tabelatitulo">
-            <td class="tabelanomes">Nome</td>
-            <td class="tabelanomes">Sobrenome</td>
-            <td class="tabelanomes">E-mail</td>
-            <td class="tabelanomes">Telefone</td>
-            <td class="tabelanomes">Mensagem</td>
-            <td class="tabelanomes">Opção</td>
-            <td class="tabelanomes">Termo</td>
-          </tr>
-          <?php
-          $resultpesq = $_POST['emailpesq'];
-          $sql = "SELECT * FROM formulario where email like '$resultpesq'";
-          $resultado = mysqli_query($conn, $sql);
-          if($resultado == NULL || $resultpesq == NULL){
-            echo("Favor informar um email valido para a pesquisa");
-          }
-          while ($registro = mysqli_fetch_array($resultado)) {
-            $nome = $registro['nome'];
-            $sobrenome = $registro['sobrenome'];
-            $email = $registro['email'];
-            $telefone = $registro['telefone'];
-            $mensagem = $registro['mensagem'];
-            $opcao = $registro['opcao'];
-            $termo = $registro['termo'];
-            echo "<tr>";
-            echo "<td>" . $nome . "</td>";
-            echo "<td>" . $sobrenome . "</td>";
-            echo "<td>" . $email . "</td>";
-            echo "<td>" . $telefone . "</td>";
-            echo "<td>" . $mensagem . "</td>";
-            echo "<td>" . $opcao . "</td>";
-            echo "<td>" . $termo . "</td>";
-            echo "</tr>";
-          }
+        </div>
+        <div class="conteudo-bd">
+          <table>
+            <div class="conteiner-formulario">
+              <form class="formulario" action="pesquisa.php" method="POST">
+                <input id="form1" name="emailpesq" type="text" placeholder="Pesquise o email">
+                <button class="botao" type="submit">Pesquisar</button>
+              </form>
+            </div>
+            <ul class="tabelatitulo">
+              <li class="tabela">
+                <div class="tabelanomes">Nome</div>
+                <div class="tabelanomes">Sobrenome</div>
+                <div class="tabelanomes">E-mail</div>
+                <div class="tabelanomes">Telefone</div>
+                <div class="tabelanomes">Mensagem</div>
+                <div class="tabelanomes">Opção</div>
+                <div class="tabelanomes">Termo</div>
+              </li>
+            </ul>
+            <?php
+            $resultpesq = $_POST['emailpesq'];
+            $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario where email like '$resultpesq'";
+            $resultado = mysqli_query($conn, $sql);
+            if($resultado == NULL || $resultpesq == NULL){
+              echo("Favor informar um email valido para a pesquisa");
+            }
+            while ($registro = mysqli_fetch_array($resultado)) {
+              $nome = $registro['nome'];
+              $sobrenome = $registro['sobrenome'];
+              $email = $registro['email'];
+              $telefone = $registro['telefone'];
+              $mensagem = $registro['mensagem'];
+              $opcao = $registro['opcao'];
+              $termo = $registro['termo'];
+              echo "<li class='info-bd'>";
+              echo "<div class='nome'>" . $nome . "</div>";
+              echo "<div class='sobrenome'>" . $sobrenome . "</div>";
+              echo "<div class='email'>" . $email . "</div>";
+              echo "<div class='telefone'>" . $telefone . "</div>";
+              echo "<div class='mensagem'>" . $mensagem . "</div>";
+              echo "<div class='opcao'>" . $opcao . "</div>";
+              echo "<div class='termo'>" . $termo . "</div>";
+              echo "</li>";
+            }
 
-          ?>
+            ?>
 
-        </table>
+          </table>
+        </div>
       </div>
 
       <div class="rodape">
-        <footer>
-          <h1 class="cont-footer">Entrem em contato</h1>
-          <div class="desc-tel">
-            <img class="img-footer" src="../img/icons/tel.png" alt="icone do telefone">
-            <p>11 2358-0870</p>
-          </div>
-          <p class="cont-footer">&copy Copyright 2019 - 2020</p>
-          <p class="cont-footer">JS ASSESSORIA LOGISTICA | CNPJ 35.035.569/0001-77</p>
-        </footer>
+        <?php
+          include('../defaultphp/footer.php');
+        ?>
       </div>
     </div>
   </main>

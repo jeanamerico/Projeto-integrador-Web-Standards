@@ -3,7 +3,7 @@ session_start();
 include('conectar.php');
 
 if (empty($_POST['login']) || empty($_POST['passwd'])) {
-    header('Location: ../html/login.html');
+    header('Location: ../user/login.php');
     exit();
 }
 
@@ -22,7 +22,7 @@ if ($row == 1) {
     exit();
 } else {
     $_SESSION['Não autenticado'] = true;
-    header('location: ../html/login.html');
+    header('location: ../user/login.php');
     exit();
 }
 ?>
