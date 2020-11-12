@@ -1,8 +1,7 @@
 <?php
-$servidor= "localhost";
-$usuario= "root";
-$senha = "";
-$dbname= "projeto_integrador";
+$envPath = 'env.ini';
+$env = parse_ini_file($envPath);
 
-$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+$conn = mysqli_connect($env['host'], $env['user'], $env['password'], $env['dbname']);
+
 ?>
