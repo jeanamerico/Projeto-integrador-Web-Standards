@@ -75,7 +75,7 @@
       </div>
       <div class="rodape">
         <?php
-          include('defaultphp/footer.php');
+          include('../defaultphp/footer.php');
         ?>
       </div>
     </div>
