@@ -1,17 +1,3 @@
-.apresentacao {
-  display: flex;
-  justify-content: center;
-}
-
-.boavinda {
-  margin: 5%;
-  font-size: 150%
-}
-td {
-  padding: 0 3%;
-  border-bottom: 1px solid #000;
-}
-
 .default-page {
   max-width: 1700px;
   margin-left: auto;
@@ -23,6 +9,7 @@ td {
 .conteiner-formulario {
   display: flex;
   justify-content: center;
+  padding: 0 0 50px;
 }
 
 #form1 {
@@ -44,10 +31,6 @@ div .botao:hover {
   cursor: pointer;
 }
 
-table {
-  margin: 3%;
-}
-
 .nome {
   flex-basis: 5%;
 }
@@ -66,7 +49,6 @@ table {
 .termo {
   flex-basis: 5%;
 }
-
 
 .rodape {
   width: 100%;

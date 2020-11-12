@@ -1,3 +1,13 @@
+.apresentacao {
+  display: flex;
+  justify-content: center;
+}
+
+.boavinda {
+  margin: 5%;
+  font-size: 150%
+}
+
 .rodape {
   width: 100%;
   text-align: center;
@@ -9,14 +19,6 @@ body {
 
 img {
   width: 100%;
-}
-
-li {
-  border-radius: 3px;
-  padding: 25px 30px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
 }
 
 .tabelatitulo ul {
@@ -32,9 +34,19 @@ li {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;  
 }
 
 .info-bd {
   background-color: #ffffff;
   box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }

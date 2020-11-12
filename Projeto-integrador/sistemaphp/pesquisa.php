@@ -31,13 +31,11 @@ include('../php/conectar.php');
     <div class="conteiner-geral">
       <div class="default-page">
         <div class="apresentacao">
-        
           <div class="boavinda">
             <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
           </div>
         </div>
         <div class="conteudo-bd">
-          <table>
             <div class="conteiner-formulario">
               <form class="formulario" action="pesquisa.php" method="POST">
                 <input id="form1" name="emailpesq" type="text" placeholder="Pesquise o email">
@@ -59,7 +57,7 @@ include('../php/conectar.php');
             $resultpesq = $_POST['emailpesq'];
             $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario where email like '$resultpesq'";
             $resultado = mysqli_query($conn, $sql);
-            if($resultado == NULL || $resultpesq == NULL){
+            if($resultado == null || $resultpesq == null){
               echo("Favor informar um email valido para a pesquisa");
             }
             while ($registro = mysqli_fetch_array($resultado)) {
@@ -83,11 +81,10 @@ include('../php/conectar.php');
 
             ?>
 
-          </table>
         </div>
       </div>
 
-      <div class="rodape">
+      <div class="rodape" style="bottom: 0; position:fixed;">
         <?php
           include('../defaultphp/footer.php');
         ?>

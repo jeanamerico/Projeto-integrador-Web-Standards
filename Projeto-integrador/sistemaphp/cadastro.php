@@ -29,6 +29,11 @@ include('../php/conectar.php');
   <main>
     <div class="conteiner-geral">
       <div class="default-page">
+        <div class="apresentacao">
+          <div class="boavinda">
+            <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
+          </div>
+        </div>
         <?php
         $sql = "SELECT usuario,nivel FROM userform WHERE usuario LIKE '$_SESSION[usuario]'";
         $resultconfiradm = mysqli_query($conn, $sql);
@@ -53,7 +58,7 @@ include('../php/conectar.php');
           </div>";
         }else{
           echo "
-          <div class='form'>
+          <div class='form' style='margin:160px 0;'>
           <p>Erro 401 favor verificar seu nivel de acesso!</p>
           </div>";
         }
