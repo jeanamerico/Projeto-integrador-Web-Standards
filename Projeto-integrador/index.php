@@ -15,7 +15,7 @@
 <body>
   <div class="row">
     <?php
-      include('../defaultphp/nav-bar.php');
+      include('defaultphp/nav-bar.php');
     ?>
   </div>
 
@@ -75,7 +75,7 @@
       </div>
       <div class="rodape">
         <?php
-          include('../defaultphp/footer.php');
+          include('defaultphp/footer.php');
         ?>
       </div>
     </div>
