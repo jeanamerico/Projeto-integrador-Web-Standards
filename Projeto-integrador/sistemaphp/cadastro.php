@@ -31,7 +31,9 @@ include('../php/conectar.php');
       <div class="default-page">
         <div class="apresentacao">
           <div class="boavinda">
-            <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
+            <?php
+            include('../php/saudacao.php');
+            ?>
           </div>
         </div>
         <?php

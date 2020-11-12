@@ -27,7 +27,9 @@
       <div class="default-page">
         <div class="apresentacao">
           <div class="boavinda">
-            <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
+            <?php
+            include('../php/saudacao.php');
+            ?>
           </div>
         </div>
         <div class="conteudo-bd">
@@ -49,27 +51,10 @@
             </li>
           </ul>
           <?php
-          $sql = "SELECT * FROM formulario";
+          $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario";
           $resultado = mysqli_query($conn, $sql);
 
-          while ($registro = mysqli_fetch_array($resultado)) {
-            $nome = $registro['nome'];
-            $sobrenome = $registro['sobrenome'];
-            $email = $registro['email'];
-            $telefone = $registro['telefone'];
-            $mensagem = $registro['mensagem'];
-            $opcao = $registro['opcao'];
-            $termo = $registro['termo'];
-            echo "<li class='info-bd'>";
-            echo "<div class='nome'>" . $nome . "</div>";
-            echo "<div class='sobrenome'>" . $sobrenome . "</div>";
-            echo "<div class='email'>" . $email . "</div>";
-            echo "<div class='telefone'>" . $telefone . "</div>";
-            echo "<div class='mensagem'>" . $mensagem . "</div>";
-            echo "<div class='opcao'>" . $opcao . "</div>";
-            echo "<div class='termo'>" . $termo . "</div>";
-            echo "</li>";
-          }
+          include('../php/sistema-while.php');
           ?>
         </div>
       </div>

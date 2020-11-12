@@ -47,13 +47,6 @@
             <li>Email:</li>
           </p>
         </div>
-        <h1>Dados coletados do navegador</h1>
-        <div class="Dados">
-          <p>
-            <li>Hora e data local:</li>
-            <li>Localização:</li>
-          </p>
-        </div>
         <div class="termo-exclusao">
           <h1>Termo para exclusão dos dados</h1>
           <p>Após solicitar a exclusão dos dados temos no total de 10 dias uteis para responder sua solicitação.

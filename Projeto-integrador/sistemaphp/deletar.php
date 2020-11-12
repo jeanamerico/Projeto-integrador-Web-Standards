@@ -31,7 +31,9 @@ include('../php/conectar.php');
       <div class="default-page">
         <div class="apresentacao">
           <div class="boavinda">
-            <h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
+            <?php
+            include('../php/saudacao.php');
+            ?>
           </div>
         </div>
         <?php
@@ -50,7 +52,7 @@ include('../php/conectar.php');
                 <div class='tabelausuario'>Deletar</div>
               </li>";
 
-          $sql = 'SELECT * FROM userform';
+          $sql = 'SELECT id, usuario, nivel FROM userform';
           $resultado = mysqli_query($conn, $sql);
 
           while ($registro = mysqli_fetch_array($resultado)) {
