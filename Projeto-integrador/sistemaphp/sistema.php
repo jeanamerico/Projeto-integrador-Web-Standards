@@ -3,6 +3,7 @@ include('../defaultphp/headerLog.php');
 ?>
 <title>JS ASSESSORIA LOGISTICA - Solicitações</title>
 <link rel="stylesheet" href="../css/sistema.css">
+<script src="../js/validar.js"></script>
 
 <body>
   <div class="row">
@@ -19,7 +20,7 @@ include('../defaultphp/headerLog.php');
         <div class="apresentacao">
           <div class="boavinda">
             <?php
-            include('../php/saudacao.php');
+            include('../phpml/saudacao.php');
             ?>
           </div>
         </div>
@@ -45,7 +46,7 @@ include('../defaultphp/headerLog.php');
           $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario";
           $resultado = mysqli_query($conn, $sql);
 
-          include('../php/sistema-while.php');
+          include('../phpml/sistema-while.php');
           ?>
         </div>
       </div>

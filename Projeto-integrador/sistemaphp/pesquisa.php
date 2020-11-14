@@ -5,6 +5,7 @@ include('../defaultphp/headerLog.php');
 
 <title>JS ASSESSORIA LOGISTICA - Solicitações</title>
 <link rel="stylesheet" href="../css/sistema.css">
+<script src="../js/validar.js"></script>
 
 <body>
   <div class="row">
@@ -21,7 +22,7 @@ include('../defaultphp/headerLog.php');
         <div class="apresentacao">
           <div class="boavinda">
             <?php
-            include('../php/saudacao.php');
+            include('../phpml/saudacao.php');
             ?>
           </div>
         </div>
@@ -50,7 +51,7 @@ include('../defaultphp/headerLog.php');
             if($resultado == null || $resultpesq == null){
               echo("Favor informar um email valido para a pesquisa");
             }
-            include('../php/sistema-while.php');
+            include('../phpml/sistema-while.php');
             ?>
 
         </div>
