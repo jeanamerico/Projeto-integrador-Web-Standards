@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS ASSESSORIA LOGISTICA - Serviços</title>
-  <link rel="stylesheet" href="../css/reset.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style-default.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/termuse.css">
-</head>
+<?php
+include('../defaultphp/headerUser.php');
+?>
+<title>JS ASSESSORIA LOGISTICA - Termo de uso</title>
+<link rel="stylesheet" href="../css/termuse.css">
 
 <body>
   <div class="row">
