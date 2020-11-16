@@ -21,14 +21,12 @@
 }
 
 .tabnav:hover {
-  position: fixed;
-  border-bottom: 2px solid #fff;
-  font-size: 130%;
+  border-bottom: 1px solid #fff;
   transition: 0.5s ease-out;
+
 }
 
 .subnav li a {
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
 }
