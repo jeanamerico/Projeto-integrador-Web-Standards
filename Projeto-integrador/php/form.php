@@ -16,5 +16,5 @@ if($termuso == 'Concordo' && $verif == 'Consultoria' || $verif == 'Transporte' |
     header("Location: ../user/contato.php");
     }
 }
-header("Location: ../index.php");
+header("Location: ../user/contato.php");
 ?>

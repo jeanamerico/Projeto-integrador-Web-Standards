@@ -17,9 +17,23 @@ function apenasnome(name) {
 }
 
 function validar() {
+  var nome = formulario.nome.value;
+  var snome = formulario.snome.value;
   var email = formulario.email.value;
   var telefone = formulario.telefone.value;
 
+  if(nome.length <= 3){
+    alert('informe um nome correto');
+    formulario.nome.focus();
+    return false;
+  }
+
+  if(snome.length <= 3){
+    alert('informe um sobrenome correto');
+    formulario.snome.focus();
+    return false;
+  }
+  
   if (email.indexOf('@') < 0 || email.indexOf('.com') == -1) {
     alert('Informe seu email correto!');
     formulario.email.focus();
