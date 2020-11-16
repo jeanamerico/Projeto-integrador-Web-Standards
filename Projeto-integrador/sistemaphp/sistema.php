@@ -1,9 +1,10 @@
 <?php
+include('../php/conectar.php');
 include('../defaultphp/headerLog.php');
 ?>
+
 <title>JS ASSESSORIA LOGISTICA - Solicitações</title>
 <link rel="stylesheet" href="../css/sistema.css">
-<script src="../js/validar.js"></script>
 
 <body>
   <div class="row">
@@ -25,13 +26,13 @@ include('../defaultphp/headerLog.php');
           </div>
         </div>
         <div class="conteudo-bd">
-        <?php
-          include('../phpml/echosistem.php');
-          
-          $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario";
-          $resultado = mysqli_query($conn, $sql);
+          <?php
+            include('../phpml/echosistem.php');
+            
+            $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario";
+            $resultado = mysqli_query($conn, $sql);
 
-          include('../phpml/sistema-while.php');
+            include('../phpml/sistema-while.php');
           ?>
         </div>
       </div>

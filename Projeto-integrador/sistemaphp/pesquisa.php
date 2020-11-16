@@ -5,7 +5,6 @@ include('../defaultphp/headerLog.php');
 
 <title>JS ASSESSORIA LOGISTICA - Solicitações</title>
 <link rel="stylesheet" href="../css/sistema.css">
-<script src="../js/validar.js"></script>
 
 <body>
   <div class="row">
@@ -33,10 +32,7 @@ include('../defaultphp/headerLog.php');
             $resultpesq = $_POST['emailpesq'];
             $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario where email like '$resultpesq'";
             $resultado = mysqli_query($conn, $sql);
-            if($resultado == null || $resultpesq == null){
-              echo("Favor informar um email valido para a pesquisa");
-            }
-            include('../phpml/sistema-while.php');
+            include('../phpml/sistema-while.php');            
           ?>
 
         </div>
