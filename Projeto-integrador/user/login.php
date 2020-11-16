@@ -15,6 +15,7 @@ include('../defaultphp/headerUser.php');
     <div class="conteiner-geral">
       <div class="login-page">
         <div class="form">
+          <p class="login">Login area administrativa</p>
           <form name="login-form" class="formulario" action="../php/userform.php" method="POST">
             <input name="login" type="text" placeholder="Usuario" />
             <input name="passwd" type="password" placeholder="Senha" />
