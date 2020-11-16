@@ -30,9 +30,18 @@ include('../defaultphp/headerLog.php');
             include('../phpml/echosistem.php');
           
             $resultpesq = $_POST['emailpesq'];
-            $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario where email like '$resultpesq'";
-            $resultado = mysqli_query($conn, $sql);
-            include('../phpml/sistema-while.php');            
+            if(strlen($resultpesq) <= 6){
+              echo("
+              <p style='
+              display: flex;
+              justify-content: center;
+              margin: 10% 0 215px;
+              '>Favor informar um email valido para a pesquisa</p>");
+            }else{
+              $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario where email like '$resultpesq'";
+              $resultado = mysqli_query($conn, $sql);
+              include('../phpml/sistema-while.php'); 
+              }
           ?>
 
         </div>

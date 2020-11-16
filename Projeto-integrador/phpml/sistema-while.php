@@ -18,11 +18,5 @@ if($resultado == true){
         echo "<div class='termo'>" . $termo . "</div>";
         echo "</li>";
     }
-}else{
-    echo("<p style=
-    display: flex;
-    justify-content: center;
-    margin: 10% 0 215px;
-    Favor informar um email valido para a pesquisa</p>");
 }
 ?>
