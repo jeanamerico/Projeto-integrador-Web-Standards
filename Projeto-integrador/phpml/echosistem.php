@@ -1,7 +1,7 @@
 <?php
 echo '
     <div class="conteiner-formulario">
-      <form class="formulario" action="pesquisa.php" method="POST">
+      <form name="formulario" class="formulario" action="pesquisa.php" method="POST">
         <input id="form1" name="emailpesq" type="text" placeholder="Pesquise o email">
         <button class="botao" type="submit">Pesquisar</button>
       </form>
