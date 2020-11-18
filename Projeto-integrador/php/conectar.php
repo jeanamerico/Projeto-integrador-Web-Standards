@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $envPath = 'env.ini';
 $env = parse_ini_file($envPath);
 

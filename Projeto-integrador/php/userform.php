@@ -18,11 +18,19 @@ $row = mysqli_num_rows($result);
 
 if ($row == 1) {
     $_SESSION['usuario'] = $usuario;
-    header('location: ../sistemaphp/sistema.php');
+    header('location: ../sistemaphp/trocarsenha.php');
     exit();
-} else {
+}else {
     $_SESSION['Não autenticado'] = true;
     header('location: ../user/login.php');
     exit();
 }
+
+
+/*$queryacess = "SELECT acesso FROM userform Where usuario like '{$usuario}' AND acesso = '0'";
+    $resultq = mysqli_query($conn, $queryacess);
+    $numr = mysqli_num_rows($resultq);
+    if($numr == 1){
+        header("location: ../sistemaphp/trocarsenha.php?usuario=$_POST[login]");
+    }*/
 ?>
