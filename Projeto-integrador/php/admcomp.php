@@ -1,5 +1,4 @@
 <?php
-include('conectar.php');
 include('verifica.php');
 
 $sql = "SELECT usuario,nivel FROM userform WHERE usuario LIKE '$_SESSION[usuario]'";

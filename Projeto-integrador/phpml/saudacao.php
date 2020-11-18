@@ -1,5 +1,4 @@
 <?php
-include('../php/conectar.php');
 include('../php/verifica.php');
 
 echo "
