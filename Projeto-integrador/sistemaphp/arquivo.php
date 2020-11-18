@@ -3,7 +3,7 @@ include('../php/conectar.php');
 include('../defaultphp/headerLog.php');
 ?>
 
-<title>JS ASSESSORIA LOGISTICA - Solicitações</title>
+<title>JS ASSESSORIA LOGISTICA - Arquivados</title>
 <link rel="stylesheet" href="../css/sistema.css">
 
 <body>
@@ -26,13 +26,13 @@ include('../defaultphp/headerLog.php');
           </div>
         </div>
         <div class="conteudo-bd">
-          <?php
-            include('../phpml/echosistem.php');
+            <?php
+            include('../phpml/echosistemarquivo.php');
             
-            $sql = "SELECT id,nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario";
+            $sql = "SELECT id,nome,sobrenome,email,telefone,mensagem,opcao,termo FROM arquivo";
             $resultado = mysqli_query($conn, $sql);
 
-            include('../phpml/sistema-while.php');
+            include('../phpml/sistema-arquivo.php');
           ?>
         </div>
       </div>

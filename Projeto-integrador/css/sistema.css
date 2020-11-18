@@ -36,6 +36,9 @@ div .botao:hover {
   cursor: pointer;
 }
 
+.id{
+  flex-basis: 5%;
+}
 .nome {
   flex-basis: 5%;
 }
@@ -53,6 +56,10 @@ div .botao:hover {
 }
 .termo {
   flex-basis: 5%;
+}
+.arquivar{
+  width: 4%;
+  margin: 0 0 0 30px;
 }
 
 .rodape {

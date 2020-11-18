@@ -38,7 +38,7 @@ include('../defaultphp/headerLog.php');
               margin: 10% 0 215px;
               '>Favor informar um email valido para a pesquisa</p>");
             }else{
-              $sql = "SELECT nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario where email like '$resultpesq'";
+              $sql = "SELECT id,nome,sobrenome,email,telefone,mensagem,opcao,termo FROM formulario where email like '$resultpesq'";
               $resultado = mysqli_query($conn, $sql);
               include('../phpml/sistema-while.php'); 
               }

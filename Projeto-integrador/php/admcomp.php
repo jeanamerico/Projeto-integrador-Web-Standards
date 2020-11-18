@@ -10,6 +10,7 @@ if ($nivel == "Admin" || $nivel == "Comum") {
   echo '
     <li><a class="tabnav" href="deletar.php">Excluir usuario</a></li>
     <li><a class="tabnav" href="cadastro.php">Cadastrar usuario</a></li>
+    <li><a class="tabnav" href="arquivo.php">Arquivo</a></li>
     <li><a class="tabnav" href="sistema.php">Solicitações</a></li>
     <li><a class="tabnav" href="../php/logout.php">Sair</a></li>
     ';
