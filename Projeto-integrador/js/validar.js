@@ -88,3 +88,18 @@ function validarpesq(emailpesq){
     return false;
   }
 }
+
+function validacadastro(){
+  var login = loginform.login.value;
+  var passwd = loginform.passwd.value;
+  if(login.length == ""){
+    alert('O campo de login deve ser preenchido');
+    loginform.login.focus();
+    return false;
+  }
+  if(passwd.length == ""){
+    alert('O campo da senha deve ser preenchido');
+    loginform.passwd.focus();
+    return false;
+  }
+}

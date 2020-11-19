@@ -5,6 +5,7 @@ include('../defaultphp/headerLog.php');
 
 <title>JS ASSESSORIA LOGISTICA - Cadastro</title>
 <link rel="stylesheet" href="../css/cad-user.css">
+<script src="../js/validar.js"></script>
 
 <body>
   <div class="row">
@@ -32,21 +33,21 @@ include('../defaultphp/headerLog.php');
         
         $nivel = $verificador['nivel'];
         if ($nivel == 'Admin') {
-          echo "        
-          <div class='form'>
+          echo '        
+          <div class="form">
             <p>Cadastrar novo usuario</p>
-            <form name='login-form' class='formulario' action='../php/sendbd.php' method='POST'>
-              <input name='login' type='text' placeholder='Usuario' />
-              <input name='passwd' type='password' placeholder='Senha' />
-              <div class='campo'>
-                <select class='desc-opcao' name='verifica' required>
-                <option value='Admin'>Admin</option>
-                <option value='Comum'>Comum</option>
+            <form name="loginform" class="formulario" action="../php/sendbd.php" method="POST">
+              <input name="login" type="text" placeholder="Usuario" />
+              <input name="passwd" type="password" placeholder="Senha" />
+              <div class="campo">
+                <select class="desc-opcao" name="verifica" required>
+                <option value="Admin">Admin</option>
+                <option value="Comum">Comum</option>
                 </select>
               </div>
-              <button class='botao' type='submit'>Registrar</button>
+              <button class="botao" type="submit" onclick=\'return validacadastro(this);\'>Registrar</button>
             </form>
-          </div>";
+          </div>';
         }else{
           echo "
           <div class='form' style='margin:160px 0;'>
