@@ -3,7 +3,7 @@ include('../php/conectar.php');
 include('../defaultphp/headerLog.php');
 ?>
 
-<title>JS ASSESSORIA LOGISTICA - Solicitações</title>
+<title>JS ASSESSORIA LOGISTICA - Arquivados</title>
 <link rel="stylesheet" href="../css/sistema.css">
 
 <body>
@@ -34,7 +34,7 @@ include('../defaultphp/headerLog.php');
             $resultado = mysqli_query($conn, $sql);
             $row = mysqli_num_rows($resultado);
             if($row >= 1){
-              include('../phpml/sistema-while.php'); 
+              include('../phpml/sistema-arquivo.php'); 
             }else{
               echo("
               <p style='

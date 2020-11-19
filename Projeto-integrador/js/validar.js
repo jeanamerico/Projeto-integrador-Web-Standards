@@ -22,7 +22,6 @@ function validar() {
   var email = formulario.email.value;
   var telefone = formulario.telefone.value;
   var textarea = formulario.textarea.value;
-  let checkbox = document.getElementById('termouso');
 
   if(nome.length <= 3){
     alert('informe um nome correto');

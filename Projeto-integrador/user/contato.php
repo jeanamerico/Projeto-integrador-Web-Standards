@@ -57,7 +57,7 @@ include('../defaultphp/headerUser.php');
                 </select>
               </div>
               <div class="term">
-                <input id="termouso" name="termouso"  type="checkbox" value="Concordo" onclick="return validar()" require>
+                <input id="termouso" name="termouso"  type="checkbox" value="Concordo" require>
                 <label for="Checkbox">Estou de acordo com o </label>
                 <a href="termofuse.php">termo de uso. </a>
               </div>
