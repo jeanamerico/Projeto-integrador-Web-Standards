@@ -17,11 +17,11 @@ function apenasletras(name) {
 }
 
 function validar() {
-  var nome = document.getElementsByTagName('nome');
-  var snome = document.getElementsByTagName('snome');
-  var email = document.getElementsByTagName('email');
-  var telefone = document.getElementsByTagName('telefone');
-  var textarea = document.getElementsByTagName('textarea');
+  var nome = formulario.nome.value;
+  var snome = formulario.snome.value;
+  var email = formulario.email.value;
+  var telefone = formulario.telefone.value;
+  var textarea = formulario.textarea.value;
   let checkbox = document.getElementById('termouso');
 
   if(nome.length <= 3){
@@ -70,9 +70,9 @@ function validar() {
     return false;
   }
 
-  if (checkbox != checkbox.checked){
+  if (document.getElementsByTagName('termouso').checked) {
     alert('Verificar o termo de uso');
-    formulario.checkbox.focus();
+    formulario.termouso.focus();
     return false;
   }
 }

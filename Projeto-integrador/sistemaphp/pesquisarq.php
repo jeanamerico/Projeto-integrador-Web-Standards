@@ -30,18 +30,19 @@ include('../defaultphp/headerLog.php');
             include('../phpml/echosistemarquivo.php');
           
             $resultpesq = $_POST['emailpesq'];
-            if(strlen($resultpesq) <= 6){
+            $sql = "SELECT id,nome,sobrenome,email,telefone,mensagem,opcao,termo FROM arquivo where email like '$resultpesq'";
+            $resultado = mysqli_query($conn, $sql);
+            $row = mysqli_num_rows($resultado);
+            if($row >= 1){
+              include('../phpml/sistema-while.php'); 
+            }else{
               echo("
               <p style='
               display: flex;
               justify-content: center;
               margin: 10% 0 215px;
-              '>Favor informar um email valido para a pesquisa</p>");
-            }else{
-              $sql = "SELECT id,nome,sobrenome,email,telefone,mensagem,opcao,termo FROM arquivo where email like '$resultpesq'";
-              $resultado = mysqli_query($conn, $sql);
-              include('../phpml/sistema-arquivo.php'); 
-              }
+              '>O endereço de email não foi encontrado</p>");
+            } 
           ?>
 
         </div>
