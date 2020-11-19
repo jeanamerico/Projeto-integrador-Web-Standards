@@ -17,11 +17,12 @@ function apenasletras(name) {
 }
 
 function validar() {
-  var nome = formulario.nome.value;
-  var snome = formulario.snome.value;
-  var email = formulario.email.value;
-  var telefone = formulario.telefone.value;
-  var textarea = formulario.textarea.value;
+  var nome = document.getElementsByTagName('nome');
+  var snome = document.getElementsByTagName('snome');
+  var email = document.getElementsByTagName('email');
+  var telefone = document.getElementsByTagName('telefone');
+  var textarea = document.getElementsByTagName('textarea');
+  let checkbox = document.getElementById('termouso');
 
   if(nome.length <= 3){
     alert('informe um nome correto');
@@ -69,9 +70,9 @@ function validar() {
     return false;
   }
 
-  if (document.getElementsByTagName('termouso').checked) {
-    alert('Favor verificar o termo de uso');
-    formulario.termouso.focus();
+  if (checkbox != checkbox.checked){
+    alert('Verificar o termo de uso');
+    formulario.checkbox.focus();
     return false;
   }
 }
