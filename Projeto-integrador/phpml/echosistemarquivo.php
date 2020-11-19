@@ -1,9 +1,11 @@
+<script src="../js/validar.js"></script>
+
 <?php
 echo '
     <div class="conteiner-formulario">
-        <form name="formulario" class="formulario" action="pesquisarq.php" method="POST">
-            <input id="form1" name="emailpesq" type="text" placeholder="Pesquise o email">
-            <button class="botao" type="submit">Pesquisar</button>
+        <form name="formulariopesq" class="formulario" action="pesquisarq.php" method="POST">
+            <input id="form1" name="emailpesq" type="text" placeholder="Pesquise o email" onkeyup="apenasletras(this);" maxlenght="155">
+            <button class="botao" type="submit" onclick=\'return validarpesq(this);\'>Pesquisar</button>
         </form>
     </div>
     <ul class="tabelatitulo">

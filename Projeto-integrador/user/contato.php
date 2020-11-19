@@ -35,19 +35,19 @@ include('../defaultphp/headerUser.php');
           <form name="formulario" class="formulario" action="../php/form.php" method="POST">
             <fieldset class="grupo">
               <div class="campo">
-                <input id="form1" type="text"  name="nome" placeholder="Nome" onkeyup="apenasnome(this);" required>
+                <input id="form1" type="text"  name="nome" placeholder="Nome" onkeyup="apenasletras(this);" maxlength="20" required>
               </div>
               <div class="campo">
-                <input id="form1" type="text" name="snome" placeholder="Sobrenome" onkeyup="apenasnome(this);" required>
+                <input id="form1" type="text" name="snome" placeholder="Sobrenome" onkeyup="apenasletras(this);" maxlength="30" required>
               </div>
               <div class="campo">
-                <input id="form1" type="email" name="email" placeholder="Exemplo@dominio.com.br" required>
+                <input id="form1" type="email" name="email" placeholder="Exemplo@dominio.com.br" onkeyup="apenasletras(this);" maxlength="150" required>
               </div>
               <div class="campo">
-                <input id="form1" type="tel" name="telefone" placeholder="ddd + Digitos" onkeyup="somenteNumeros(this);" required>
+                <input id="form1" type="tel" name="telefone" placeholder="(ddd) + Digitos" onkeyup="somenteNumeros(this);" maxlength="20" required>
               </div>
               <div class="campo">
-                <textarea id="form1" name="textarea" rows="6" cols="30" placeholder="Seu comentario aqui." onkeyup="apenasnome(this);" required></textarea>
+                <textarea id="form1" name="textarea" rows="6" cols="30" placeholder="Seu comentario aqui." onkeyup="apenasletras(this);" maxlength="512" required></textarea>
               </div>
               <div class="campo">
                 <select class="desc-opcao" name="verifica" required>
@@ -57,7 +57,7 @@ include('../defaultphp/headerUser.php');
                 </select>
               </div>
               <div class="term">
-                <input name="termouso"  type="checkbox" value="Concordo" onclick="validar()">
+                <input name="termouso"  type="checkbox" value="Concordo">
                 <label for="Checkbox">Estou de acordo com o </label>
                 <a href="termofuse.php">termo de uso. </a>
               </div>

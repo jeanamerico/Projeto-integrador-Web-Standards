@@ -1,5 +1,5 @@
 function somenteNumeros(num) {
-  const er = /[^0-9.]/;
+  const er = /[^0-9() +-.]/;
   er.lastIndex = 0;
   var campo = num;
   if (er.test(campo.value)) {
@@ -7,7 +7,7 @@ function somenteNumeros(num) {
   }
 }
 
-function apenasnome(name) {
+function apenasletras(name) {
   const nome = /[<>{}]/;
   nome.lastIndex = 0;
   var campo = name;
@@ -21,9 +21,14 @@ function validar() {
   var snome = formulario.snome.value;
   var email = formulario.email.value;
   var telefone = formulario.telefone.value;
+  var textarea = formulario.textarea.value;
 
   if(nome.length <= 3){
     alert('informe um nome correto');
+    formulario.nome.focus();
+    return false;
+  }else if(nome.length > 20){
+    alert('Nome excede o tamanho do campo (Max:20 caracteres)');
     formulario.nome.focus();
     return false;
   }
@@ -32,10 +37,18 @@ function validar() {
     alert('informe um sobrenome correto');
     formulario.snome.focus();
     return false;
+  }else if(snome.length > 30){
+    alert('Sobrenome excede o tamanho do campo (Max:30 caracteres)');
+    formulario.snome.focus();
+    return false;
   }
   
   if (email.indexOf('@') < 0 || email.indexOf('.com') == -1) {
     alert('Informe seu email correto!');
+    formulario.email.focus();
+    return false;
+  }else if(email.length > 150){
+    alert('Email excede o tamanho do campo (Max:150 caracteres)');
     formulario.email.focus();
     return false;
   }
@@ -44,11 +57,34 @@ function validar() {
     alert('Informe um telefone valido');
     formulario.telefone.focus();
     return false;
+  }else if(telefone.length > 20){
+    alert('Telefone excede o tamanho do campo (Max:20 caracteres)');
+    formulario.telefone.focus();
+    return false;
+  }
+
+  if(textarea.length > 512){
+    alert('Mensagem excede o tamanho do campo (Max: 512 caracteres)');
+    formulario.textarea.focus();
+    return false;
   }
 
   if (document.getElementsByTagName('termouso').checked) {
-    alert('Verificar o termo de uso');
+    alert('Favor verificar o termo de uso');
     formulario.termouso.focus();
+    return false;
+  }
+}
+
+function validarpesq(emailpesq){
+  var emailpesq = formulariopesq.emailpesq.value;
+  if (emailpesq.indexOf('@') < 0 || emailpesq.indexOf('.com') == -1) {
+    alert('Informe o email de pesquisa correto! (Completo)');
+    formulariopesq.emailpesq.focus();
+    return false;
+  }else if(emailpesq.length > 150){
+    alert('Email excede o tamanho do campo (Max:150 caracteres)');
+    formulariopesq.emailpesq.focus();
     return false;
   }
 }

@@ -1,11 +1,6 @@
 <?php
 include('conectar.php');
 
-if (empty($_POST['login']) || empty($_POST['passwd'])) {
-    header('Location: ../user/login.php');
-    exit();
-}
-
 $usuario = mysqli_real_escape_string($conn, $_POST['login']);
 $senha = mysqli_real_escape_string($conn, $_POST['passwd']);
 

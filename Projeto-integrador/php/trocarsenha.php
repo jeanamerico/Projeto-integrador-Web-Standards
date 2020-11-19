@@ -1,6 +1,10 @@
 <?php
 include('conectar.php');
 
+if (empty($_POST['passwd']) || empty($_POST['passwd2'])) {
+    header('Location: ../sistemaphp/trocarsenha.php');
+    exit();
+}
 
 $senha = filter_input(INPUT_POST, 'passwd');
 $senha2 = filter_input(INPUT_POST, 'passwd2');
