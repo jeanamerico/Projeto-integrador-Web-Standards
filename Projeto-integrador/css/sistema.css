@@ -48,11 +48,9 @@ div .botao:hover {
 .email {
   flex-basis: 10%;
 }
-.telefone {
-  flex-basis: 5%;
-}
 .mensagem {
   flex-basis: 15%;
+  width: 246px;
 }
 .termo {
   flex-basis: 5%;
